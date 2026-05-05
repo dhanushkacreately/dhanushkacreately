@@ -1,0 +1,52 @@
+name: Update Profile README
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 18 * * 5"
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate recent contributions section
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate.js > /tmp/recent-contributions.md
+
+      - name: Update README
+        run: |
+          node -e '
+          const fs = require("fs");
+          const readmePath = "README.md";
+          const start = "<!-- recent-contributions:start -->";
+          const end = "<!-- recent-contributions:end -->";
+          const replacement = `${start}\n${fs.readFileSync("/tmp/recent-contributions.md", "utf8").trim()}\n${end}`;
+          const readme = fs.readFileSync(readmePath, "utf8");
+          const next = readme.replace(
+            new RegExp(`${start}[\\s\\S]*?${end}`),
+            replacement
+          );
+          fs.writeFileSync(readmePath, next);
+          '
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "Update recent contributions"
+          git push
