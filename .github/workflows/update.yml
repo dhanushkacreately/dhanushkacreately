@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: "18"
 
       # -----------------------
       # 3. Install GitHub CLI
@@ -48,19 +48,13 @@ jobs:
         run: cp README.md README_old.md
 
       # -----------------------
-      # 6. Update README
-      # -----------------------
-      - name: Update README
-        run: node scripts/update-readme.js
-
-      # -----------------------
-      # 7. Generate diff
+      # 6. Generate diff
       # -----------------------
       - name: Create diff
         run: diff README_old.md README.md > changes.txt || true
 
       # -----------------------
-      # 8. Commit changes
+      # 7. Commit changes
       # -----------------------
       - name: Commit changes
         run: |
@@ -71,7 +65,7 @@ jobs:
           git push
 
       # -----------------------
-      # 9. Send email (SMTP)
+      # 8. Send email (SMTP)
       # -----------------------
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
