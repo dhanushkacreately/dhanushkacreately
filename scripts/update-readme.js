@@ -140,7 +140,9 @@ No recent contributions to display.
     closed: prs.filter(pr => pr.state.toUpperCase() === "CLOSED").length
   };
 
-  markdown += `📊 **Total PRs:** ${metrics.total} | ✅ **Merged:** ${metrics.merged} | 🟡 **Open:** ${metrics.open} | ❌ **Closed:** ${metrics.closed}\n\n`;
+  markdown += `| 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |\n`;
+  markdown += `| :---: | :---: | :---: | :---: |\n`;
+  markdown += `| ${metrics.total} | ${metrics.merged} | ${metrics.open} | ${metrics.closed} |\n\n`;
 
   const sortedRepos = Object.keys(groupedByRepo).sort();
 
