@@ -23,7 +23,7 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 
 ---
 
-## 🚀 Recent Contributions
+## 🚀 All Contributions
 
 **All PRs across all projects - Updated daily at 12 PM**
 
