@@ -1,52 +1,97 @@
-name: Update Profile README
+name: Update Profile Contributions + Email Report
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 18 * * 5"
+    - cron: "0 12 * * *" # every day at 12 PM
+  workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: read
 
 jobs:
-  update-readme:
+  update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      # -----------------------
+      # 1. Checkout repo
+      # -----------------------
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      # -----------------------
+      # 2. Setup Node
+      # -----------------------
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
 
-      - name: Generate recent contributions section
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/generate.js > /tmp/recent-contributions.md
-
-      - name: Update README
+      # -----------------------
+      # 3. Install GitHub CLI
+      # -----------------------
+      - name: Install GitHub CLI
         run: |
-          node -e '
-          const fs = require("fs");
-          const readmePath = "README.md";
-          const start = "<!-- recent-contributions:start -->";
-          const end = "<!-- recent-contributions:end -->";
-          const replacement = `${start}\n${fs.readFileSync("/tmp/recent-contributions.md", "utf8").trim()}\n${end}`;
-          const readme = fs.readFileSync(readmePath, "utf8");
-          const next = readme.replace(
-            new RegExp(`${start}[\\s\\S]*?${end}`),
-            replacement
-          );
-          fs.writeFileSync(readmePath, next);
-          '
+          sudo apt update
+          sudo apt install gh -y
 
+      # -----------------------
+      # 4. Generate contributions
+      # -----------------------
+      - name: Generate contributions
+        run: node scripts/generate.js > contrib.txt
+
+      # -----------------------
+      # 5. Backup old README (for diff)
+      # -----------------------
+      - name: Backup old README
+        run: cp README.md README_old.md
+
+      # -----------------------
+      # 6. Update README
+      # -----------------------
+      - name: Update README
+        run: node scripts/update-readme.js
+
+      # -----------------------
+      # 7. Generate diff
+      # -----------------------
+      - name: Create diff
+        run: diff README_old.md README.md > changes.txt || true
+
+      # -----------------------
+      # 8. Commit changes
+      # -----------------------
       - name: Commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update recent contributions"
+          git commit -m "chore: update profile contributions" || exit 0
           git push
+
+      # -----------------------
+      # 9. Send email (SMTP)
+      # -----------------------
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "GitHub Profile Updated - Weekly Report"
+          to: your-email@gmail.com
+          from: GitHub Actions <${{ secrets.EMAIL_USER }}>
+          body: |
+            🚀 Weekly GitHub Profile Update
+
+            Your profile README has been updated.
+
+            📌 Summary:
+            - Contributions section refreshed
+            - Latest merged PRs included
+
+            📄 Diff:
+            ${{ steps.diff.outputs.content }}
