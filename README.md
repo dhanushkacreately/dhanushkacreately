@@ -28,7 +28,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 * AI-driven user workflows
 * End-to-End testing & reliability
 * Complex UI interactions (diagramming / editors)
-* Product-focused design
+* Product-focused engineering
 
 ---
 
