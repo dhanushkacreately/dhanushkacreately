@@ -4,10 +4,10 @@ const { execSync } = require("child_process");
 
 const USER = "dhanushkacreately";
 const README_PATH = path.join(__dirname, "../README.md");
+const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
 function getAllMergedPrs() {
   try {
-    // Fetch all merged PRs created by the user across all repos
     return JSON.parse(
       execSync(
         `gh search prs --author ${USER} --state closed --merged --limit 50 --json title,url,closedAt,repository`,
@@ -20,17 +20,80 @@ function getAllMergedPrs() {
   }
 }
 
+function parseContributionsFile() {
+  try {
+    if (!fs.existsSync(CONTRIBUTIONS_PATH)) {
+      console.warn("Warning: CONTRIBUTIONS.md not found");
+      return {};
+    }
+
+    const content = fs.readFileSync(CONTRIBUTIONS_PATH, "utf8");
+    const contributions = {};
+
+    // Parse the markdown file to extract contribution details
+    const repoSections = content.split(/^## /m).slice(1); // Skip header
+
+    repoSections.forEach((section) => {
+      const lines = section.split("\n");
+      const repoName = lines[0].trim();
+      contributions[repoName] = [];
+
+      let currentContribution = null;
+      let currentField = null;
+
+      lines.slice(1).forEach((line) => {
+        if (line.startsWith("### ")) {
+          if (currentContribution) {
+            contributions[repoName].push(currentContribution);
+          }
+          currentContribution = {
+            title: line.replace("### ", "").trim(),
+            pr: "",
+            date: "",
+            techStack: "",
+            implementation: [],
+            impact: [],
+          };
+          currentField = null;
+        } else if (currentContribution) {
+          if (line.startsWith("- **PR:**")) {
+            currentContribution.pr = line.replace("- **PR:**", "").trim();
+          } else if (line.startsWith("- **Date:**")) {
+            currentContribution.date = line.replace("- **Date:**", "").trim();
+          } else if (line.startsWith("- **Tech Stack:**")) {
+            currentContribution.techStack = line.replace("- **Tech Stack:**", "").trim();
+          } else if (line.startsWith("- **Implementation:**")) {
+            currentField = "implementation";
+          } else if (line.startsWith("- **Impact:**")) {
+            currentField = "impact";
+          } else if (line.startsWith("  -") && currentField) {
+            currentContribution[currentField].push(line.replace("  - ", "").trim());
+          }
+        }
+      });
+
+      if (currentContribution) {
+        contributions[repoName].push(currentContribution);
+      }
+    });
+
+    return contributions;
+  } catch (error) {
+    console.warn("Warning: Could not parse CONTRIBUTIONS.md:", error.message);
+    return {};
+  }
+}
+
 function formatDate(dateString) {
   const date = new Date(dateString);
   return date.toLocaleString("en-US", { month: "long", year: "numeric" });
 }
 
 function extractRepoName(repoUrl) {
-  // Extract repo name from full URL
   return repoUrl.split("/").slice(-2).join("/");
 }
 
-function generateContributionsSection(prs) {
+function generateContributionsSection(prs, contributions) {
   if (prs.length === 0) {
     return `### ${formatDate(new Date())}
 
@@ -50,11 +113,10 @@ No recent contributions to display.
     groupedByRepo[repoName].push(pr);
   });
 
-  // Generate markdown sorted by most recent first
+  // Generate markdown
   let markdown = "";
 
   Object.entries(groupedByRepo).forEach(([repo, prList]) => {
-    // Sort by date, most recent first
     prList.sort((a, b) => new Date(b.closedAt) - new Date(a.closedAt));
 
     markdown += `### 📦 ${repo}\n\n`;
@@ -62,10 +124,47 @@ No recent contributions to display.
     prList.forEach((pr) => {
       const month = formatDate(pr.closedAt);
       markdown += `* **${pr.title}** (${month})\n`;
-      markdown += `  → [${pr.url.split("/").slice(-1)[0]}](${pr.url})\n`;
-      markdown += `  📌 Implementation & Impact:\n`;
-      markdown += `     - Feature development or bug fix addressing specific use cases\n`;
-      markdown += `     - Contributed to improved reliability, performance, or user experience\n\n`;
+      markdown += `  → [View PR](${pr.url})\n`;
+
+      // Try to find matching contribution details
+      let foundDetails = false;
+      Object.entries(contributions).forEach(([contribRepo, contribList]) => {
+        if (contribRepo.includes(repo.split("/")[1])) {
+          contribList.forEach((contrib) => {
+            if (
+              contrib.title.toLowerCase().includes(pr.title.toLowerCase()) ||
+              pr.title.toLowerCase().includes(contrib.title.toLowerCase())
+            ) {
+              markdown += `\n  📌 **Implementation & Impact:**\n`;
+              markdown += `     - **Tech Stack:** ${contrib.techStack}\n`;
+
+              if (contrib.implementation.length > 0) {
+                markdown += `     - **What was implemented:**\n`;
+                contrib.implementation.forEach((item) => {
+                  markdown += `       • ${item}\n`;
+                });
+              }
+
+              if (contrib.impact.length > 0) {
+                markdown += `     - **Impact delivered:**\n`;
+                contrib.impact.forEach((item) => {
+                  markdown += `       • ${item}\n`;
+                });
+              }
+
+              foundDetails = true;
+            }
+          });
+        }
+      });
+
+      if (!foundDetails) {
+        markdown += `\n  📌 **Implementation & Impact:**\n`;
+        markdown += `     - Feature development or bug fix addressing specific use cases\n`;
+        markdown += `     - Contributed to improved reliability, performance, or user experience\n`;
+      }
+
+      markdown += `\n`;
     });
 
     markdown += "---\n\n";
@@ -76,14 +175,11 @@ No recent contributions to display.
 
 function updateReadme() {
   try {
-    // Get current README content
     let readmeContent = fs.readFileSync(README_PATH, "utf8");
-
-    // Generate new contributions section
     const prs = getAllMergedPrs();
-    const newContributions = generateContributionsSection(prs);
+    const contributions = parseContributionsFile();
+    const newContributions = generateContributionsSection(prs, contributions);
 
-    // Replace only the auto-generated section
     const startMarker = "<!-- AUTO-GENERATED SECTION START -->";
     const endMarker = "<!-- AUTO-GENERATED SECTION END -->";
 
@@ -100,10 +196,9 @@ function updateReadme() {
 
     const updatedContent = beforeSection + "\n" + newContributions + afterSection;
 
-    // Write back to README
     fs.writeFileSync(README_PATH, updatedContent, "utf8");
     console.log("✅ README.md updated successfully!");
-    console.log(`📊 Updated ${prs.length} total contributions across repositories`);
+    console.log(`📊 Tracked ${prs.length} total contributions across repositories`);
   } catch (error) {
     console.error("Error updating README:", error.message);
     process.exit(1);
