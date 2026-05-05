@@ -39,6 +39,8 @@ jobs:
       # 4. Generate contributions
       # -----------------------
       - name: Update contributions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-readme.js
 
       # -----------------------
