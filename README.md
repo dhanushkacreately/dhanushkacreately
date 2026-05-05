@@ -47,7 +47,6 @@ No recent contributions to display.
 
 ## 📫 Contact
 
-* GitHub: https://github.com/dhanushkacreately
 * Email: [dhanushka@creately.com](mailto:dhanushka@creately.com)
 
 ---
