@@ -1,23 +1,60 @@
-# Dhanushka
+# Hi, I'm Dhanushka 👋
 
-<<<<<<< HEAD
-Software, systems, and developer workflow automation.
+Frontend-focused engineer working on AI-powered visual collaboration tools at Creately.
 
-<!-- recent-contributions:start -->
+---
+
+## 🚀 About Me
+
+* 💼 Working on **Creately AI** — improving real-world use case reliability
+* 🧪 Focused on **E2E testing (Playwright)** to reduce regressions in production flows
+* 🎯 Interested in building **scalable UI systems & meaningful user experiences**
+* ⚡ Strong focus on **impact-driven development (not just features, but outcomes)**
+
+---
+
+## 🛠️ Tech Stack
+
+* **Languages:** JavaScript, TypeScript
+* **Frontend:** React, HTML, CSS
+* **Backend:** Node.js
+* **Testing:** Playwright (E2E)
+* **Tools:** Git, GitHub, Figma
+
+---
+
 ## 🚀 Recent Contributions
 
-- Rewrite profile README with a polished starter template
-  → https://github.com/dhanushkacreately/dhanushkacreately/pull/1
-<!-- recent-contributions:end -->
-=======
-Welcome to my GitHub profile repository.
+**All PRs across all projects - Updated daily at 12 PM**
 
-## About
-This repository contains my profile `README.md`, which appears on my GitHub profile.
+<!-- AUTO-GENERATED SECTION START -->
+### 📦 dhanushkacreately/dhanushkacreately
 
-## GitHub
-- Profile: https://github.com/dhanushkacreately
-- Repositories: https://github.com/dhanushkacreately?tab=repositories
+* **Initial Profile Setup** (May 2026)
+  → [#1](https://github.com/dhanushkacreately/dhanushkacreately/pull/1)
+  📌 Implementation & Impact:
+     - Feature development or bug fix addressing specific use cases
+     - Contributed to improved reliability, performance, or user experience
 
-Thanks for visiting.
->>>>>>> origin/codex/create-readme-file
+---
+
+<!-- AUTO-GENERATED SECTION END -->
+
+---
+
+## 📈 Focus Areas
+
+* AI-driven user workflows
+* End-to-End testing & reliability
+* Complex UI interactions (diagramming / editors)
+* Product-focused engineering
+
+---
+
+## 📫 Contact
+
+* GitHub: https://github.com/dhanushkacreately
+
+---
+
+⭐ Thanks for visiting my profile!

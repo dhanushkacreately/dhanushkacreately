@@ -38,23 +38,17 @@ jobs:
       # -----------------------
       # 4. Generate contributions
       # -----------------------
-      - name: Generate contributions
-        run: node scripts/generate.js > contrib.txt
+      - name: Update contributions
+        run: node scripts/update-readme.js
 
       # -----------------------
-      # 5. Backup old README (for diff)
-      # -----------------------
-      - name: Backup old README
-        run: cp README.md README_old.md
-
-      # -----------------------
-      # 6. Generate diff
+      # 5. Generate diff
       # -----------------------
       - name: Create diff
         run: diff README_old.md README.md > changes.txt || true
 
       # -----------------------
-      # 7. Commit changes
+      # 6. Commit changes
       # -----------------------
       - name: Commit changes
         run: |
@@ -65,7 +59,7 @@ jobs:
           git push
 
       # -----------------------
-      # 8. Send email (SMTP)
+      # 7. Send email (SMTP)
       # -----------------------
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
