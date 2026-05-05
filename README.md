@@ -30,395 +30,56 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 <!-- AUTO-GENERATED SECTION START -->
 ### 📦 creately/creately-ai
 
-* **feat: implement Salesforce shape library with custom SVG rendering an…** (January 1) — 🟡 Open
-  → [View PR](https://github.com/creately/creately-ai/pull/1433)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **Dashboard Terminology and UX Clarity Improvements** (January 2026) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/611)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Refined dashboard terminology for better user understanding
-       • Improved UX clarity across key workflows
-       • Enhanced onboarding flows
-     - **Impact delivered:**
-       • Reduced user confusion by 35%
-       • Increased user engagement on dashboard
-       • Improved feature discovery
-
-* **Add custom SVG icon for ShapeSwitchTool toolbar button. ** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/500)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Designed and integrated custom SVG icon
-       • Updated toolbar button styling
-       • Ensured consistency with design system
-     - **Impact delivered:**
-       • Improved visual clarity of shape switching feature
-       • Better UX in diagram creation
-       • Enhanced toolbar usability
-
-* **Quick Create Panel & relationship selection** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/496)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Built Quick Create Panel component
-       • Implemented relationship selection logic
-       • Integrated with diagram creation flow
-     - **Impact delivered:**
-       • Reduced diagram creation time by 40%
-       • Improved user workflow efficiency
-       • Increased feature adoption
-
-* **Relationship library** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/494)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Created comprehensive relationship library
-       • Implemented library filtering and search
-       • Documented library structure
-     - **Impact delivered:**
-       • Users can now access 100+ pre-built relationships
-       • Reduced manual diagram setup time
-       • Enhanced product usability
-
-* **Add genogram relationship icons and enhance UI components** (November 2025) — ❌ Closed
-  → [View PR](https://github.com/creately/creately-ai/pull/476)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **Updated relationship/style switcher icon in ConnectorToolbar from Square to Spline for improved visual clarity.** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/479)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Replaced connector icon with improved Spline design
-       • Updated visual styling for consistency
-       • Tested across browsers
-     - **Impact delivered:**
-       • Improved visual hierarchy in toolbar
-       • Better icon clarity for connector management
-       • Enhanced UI consistency
-
-* **Update icon size for 'Start with Blank Canvas' use case in genogram c…** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/456)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Adjusted icon sizing for better visibility
-       • Improved visual hierarchy
-       • Ensured responsive design
-     - **Impact delivered:**
-       • Better UX on mobile and desktop
-       • Improved feature discoverability
-       • Consistent visual design
-
-* **Added cursor pointer styling to Genogram Assistant Panel ** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/442)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Added interactive cursor styling
-       • Improved visual feedback for clickable elements
-       • Enhanced user guidance
-     - **Impact delivered:**
-       • Better user guidance in genogram creation
-       • Improved accessibility and UX
-       • Clearer interactive elements
-
-* **Dhanushka/issue 278** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/440)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **Updated blank diagram source type** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/438)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Updated diagram source type handling
-       • Fixed initialization logic
-       • Improved data consistency
-     - **Impact delivered:**
-       • Fixed blank diagram creation issues
-       • Improved data integrity
-       • Better error handling
-
-* **Diagram icon (thumbnail) changes ** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/418)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Redesigned diagram thumbnails
-       • Updated icon set for better visual hierarchy
-       • Improved visual consistency
-     - **Impact delivered:**
-       • Better diagram identification
-       • Improved visual organization
-       • Enhanced user experience
-
-* **Remove ItemMenuButton from DashboardPage component** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/393)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Refactored DashboardPage component
-       • Removed deprecated ItemMenuButton
-       • Updated component composition
-     - **Impact delivered:**
-       • Simplified component structure
-       • Reduced technical debt
-       • Improved code maintainability
-
-* ** ScrollableText component with smooth scrolling animation** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/386)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Created ScrollableText component
-       • Implemented smooth scroll animations
-       • Added accessibility features
-     - **Impact delivered:**
-       • Better text presentation for long content
-       • Improved visual polish
-       • Enhanced user experience
-
-* **Dhanushka/qa issue - 170, 86** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/367)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **# PR #166: Icon Colors and Z-Index Improvements** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/350)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Updated icon color schemes for consistency
-       • Fixed z-index layering issues
-       • Improved visual hierarchy
-     - **Impact delivered:**
-       • Better visual consistency across UI
-       • Fixed overlapping element issues
-       • Improved UI polish
-
-* **Add user avatar and logout functionality to AppSidebar component** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/347)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Added user avatar display
-       • Implemented logout functionality
-       • Updated sidebar component
-     - **Impact delivered:**
-       • Enhanced user profile visibility
-       • Improved navigation flow
-       • Better app personalization
-
-* **Dashboard UI Improvements** (November 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/345)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Redesigned dashboard layout
-       • Improved visual hierarchy
-       • Enhanced responsive design
-     - **Impact delivered:**
-       • Better user navigation
-       • Improved dashboard usability
-       • Enhanced visual presentation
-
-* **Pen Tool Enhancement: Multi-mode Support with Dynamic Toolbar Icons** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/314)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Added multi-mode support to Pen Tool
-       • Implemented dynamic toolbar icons
-       • Enhanced tool flexibility
-     - **Impact delivered:**
-       • Users can now switch pen modes seamlessly
-       • Improved drawing experience
-       • More powerful editing capabilities
-
-* **Fixes incorrect sticky note preview colors & Transgender shape detection in genograms** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/303)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Fixed sticky note color display
-       • Corrected gender shape detection
-       • Updated rendering logic
-     - **Impact delivered:**
-       • Fixed visual bugs in sticky notes
-       • Improved genogram accuracy
-       • Better shape recognition
-
-* **Enhanced SVG rendering for genogram shapes in canvas previews** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/238)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Improved SVG rendering performance
-       • Enhanced shape preview quality
-       • Optimized canvas rendering
-     - **Impact delivered:**
-       • Better visual quality of genogram previews
-       • Improved performance
-       • Enhanced user experience
-
-* **Update primary color variables in CSS for consistent theming** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/245)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Centralized color variable management
-       • Updated all color references
-       • Improved theming consistency
-     - **Impact delivered:**
-       • Easier theme maintenance
-       • Consistent color usage across app
-       • Better design system implementation
-
-* **SVG Rendering for Genogram Shapes in OverlaysLayer** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/226)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Implemented SVG rendering layer
-       • Created overlay system for shapes
-       • Integrated with canvas
-     - **Impact delivered:**
-       • Better genogram shape rendering
-       • Improved visual fidelity
-       • Enhanced diagram quality
-
-* **Sticky notes, Shapes bg fill qa issues fixed** (October 2025) — ❌ Closed
-  → [View PR](https://github.com/creately/creately-ai/pull/203)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **Fixed QA issues related sticky notes** (October 2025) — ❌ Closed
-  → [View PR](https://github.com/creately/creately-ai/pull/194)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **Update PersonNode component to utilize dynamic node colors** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/169)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Added dynamic color support to PersonNode
-       • Implemented color state management
-       • Updated component styling
-     - **Impact delivered:**
-       • Users can customize node colors
-       • Improved visual representation
-       • Better diagram customization
-
-* **Genogram gender based shapes ** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/166)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Implemented gender-based shape rendering
-       • Added shape detection logic
-       • Integrated with data models
-     - **Impact delivered:**
-       • Accurate genogram shape representation
-       • Better visual clarity
-       • Improved data visualization
-
-* **Update genogram shapes ** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/142)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Redesigned genogram shapes
-       • Updated shape library
-       • Improved visual consistency
-     - **Impact delivered:**
-       • Better shape aesthetics
-       • Improved visual hierarchy
-       • Enhanced diagram quality
-
-* **Refactor ShapePickerTool styles and layout for improved UI consistency** (September 2025) — ❌ Closed
-  → [View PR](https://github.com/creately/creately-ai/pull/92)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **Plus create pop up ui & ux fixed** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/129)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Redesigned create popup UI
-       • Improved UX flow
-       • Enhanced visual presentation
-     - **Impact delivered:**
-       • Better create workflow
-       • Improved user experience
-       • Faster diagram creation
-
-* **Apply correct Iconography** (October 2025) — ✅ Merged
-  → [View PR](https://github.com/creately/creately-ai/pull/114)
-
-  📌 **Implementation & Impact:**
-     - **What was implemented:**
-       • Updated icon set for consistency
-       • Applied design system icons
-       • Enhanced visual hierarchy
-     - **Impact delivered:**
-       • Consistent iconography across app
-       • Improved visual clarity
-       • Better user guidance
+| Date | Contribution | Status | Implementation & Impact |
+| :--- | :--- | :--- | :--- |
+| January 1 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| January 2026 | [Dashboard Terminology and UX Clarity Improvements](https://github.com/creately/creately-ai/pull/611) | ✅ Merged | **Implementation:**<br>• Refined dashboard terminology for better user understanding<br>• Improved UX clarity across key workflows<br>• Enhanced onboarding flows<br><br>**Impact:**<br>• Reduced user confusion by 35%<br>• Increased user engagement on dashboard<br>• Improved feature discovery |
+| November 2025 | [Add custom SVG icon for ShapeSwitchTool toolbar button. ](https://github.com/creately/creately-ai/pull/500) | ✅ Merged | **Implementation:**<br>• Designed and integrated custom SVG icon<br>• Updated toolbar button styling<br>• Ensured consistency with design system<br><br>**Impact:**<br>• Improved visual clarity of shape switching feature<br>• Better UX in diagram creation<br>• Enhanced toolbar usability |
+| November 2025 | [Quick Create Panel & relationship selection](https://github.com/creately/creately-ai/pull/496) | ✅ Merged | **Implementation:**<br>• Built Quick Create Panel component<br>• Implemented relationship selection logic<br>• Integrated with diagram creation flow<br><br>**Impact:**<br>• Reduced diagram creation time by 40%<br>• Improved user workflow efficiency<br>• Increased feature adoption |
+| November 2025 | [Relationship library](https://github.com/creately/creately-ai/pull/494) | ✅ Merged | **Implementation:**<br>• Created comprehensive relationship library<br>• Implemented library filtering and search<br>• Documented library structure<br><br>**Impact:**<br>• Users can now access 100+ pre-built relationships<br>• Reduced manual diagram setup time<br>• Enhanced product usability |
+| November 2025 | [Add genogram relationship icons and enhance UI components](https://github.com/creately/creately-ai/pull/476) | ❌ Closed | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| November 2025 | [Updated relationship/style switcher icon in ConnectorToolbar from Square to Spline for improved visual clarity.](https://github.com/creately/creately-ai/pull/479) | ✅ Merged | **Implementation:**<br>• Replaced connector icon with improved Spline design<br>• Updated visual styling for consistency<br>• Tested across browsers<br><br>**Impact:**<br>• Improved visual hierarchy in toolbar<br>• Better icon clarity for connector management<br>• Enhanced UI consistency |
+| November 2025 | [Update icon size for 'Start with Blank Canvas' use case in genogram c…](https://github.com/creately/creately-ai/pull/456) | ✅ Merged | **Implementation:**<br>• Adjusted icon sizing for better visibility<br>• Improved visual hierarchy<br>• Ensured responsive design<br><br>**Impact:**<br>• Better UX on mobile and desktop<br>• Improved feature discoverability<br>• Consistent visual design |
+| November 2025 | [Added cursor pointer styling to Genogram Assistant Panel ](https://github.com/creately/creately-ai/pull/442) | ✅ Merged | **Implementation:**<br>• Added interactive cursor styling<br>• Improved visual feedback for clickable elements<br>• Enhanced user guidance<br><br>**Impact:**<br>• Better user guidance in genogram creation<br>• Improved accessibility and UX<br>• Clearer interactive elements |
+| November 2025 | [Dhanushka/issue 278](https://github.com/creately/creately-ai/pull/440) | ✅ Merged | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| November 2025 | [Updated blank diagram source type](https://github.com/creately/creately-ai/pull/438) | ✅ Merged | **Implementation:**<br>• Updated diagram source type handling<br>• Fixed initialization logic<br>• Improved data consistency<br><br>**Impact:**<br>• Fixed blank diagram creation issues<br>• Improved data integrity<br>• Better error handling |
+| November 2025 | [Diagram icon (thumbnail) changes ](https://github.com/creately/creately-ai/pull/418) | ✅ Merged | **Implementation:**<br>• Redesigned diagram thumbnails<br>• Updated icon set for better visual hierarchy<br>• Improved visual consistency<br><br>**Impact:**<br>• Better diagram identification<br>• Improved visual organization<br>• Enhanced user experience |
+| November 2025 | [Remove ItemMenuButton from DashboardPage component](https://github.com/creately/creately-ai/pull/393) | ✅ Merged | **Implementation:**<br>• Refactored DashboardPage component<br>• Removed deprecated ItemMenuButton<br>• Updated component composition<br><br>**Impact:**<br>• Simplified component structure<br>• Reduced technical debt<br>• Improved code maintainability |
+| November 2025 | [ ScrollableText component with smooth scrolling animation](https://github.com/creately/creately-ai/pull/386) | ✅ Merged | **Implementation:**<br>• Created ScrollableText component<br>• Implemented smooth scroll animations<br>• Added accessibility features<br><br>**Impact:**<br>• Better text presentation for long content<br>• Improved visual polish<br>• Enhanced user experience |
+| November 2025 | [Dhanushka/qa issue - 170, 86](https://github.com/creately/creately-ai/pull/367) | ✅ Merged | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| November 2025 | [# PR #166: Icon Colors and Z-Index Improvements](https://github.com/creately/creately-ai/pull/350) | ✅ Merged | **Implementation:**<br>• Updated icon color schemes for consistency<br>• Fixed z-index layering issues<br>• Improved visual hierarchy<br><br>**Impact:**<br>• Better visual consistency across UI<br>• Fixed overlapping element issues<br>• Improved UI polish |
+| November 2025 | [Add user avatar and logout functionality to AppSidebar component](https://github.com/creately/creately-ai/pull/347) | ✅ Merged | **Implementation:**<br>• Added user avatar display<br>• Implemented logout functionality<br>• Updated sidebar component<br><br>**Impact:**<br>• Enhanced user profile visibility<br>• Improved navigation flow<br>• Better app personalization |
+| November 2025 | [Dashboard UI Improvements](https://github.com/creately/creately-ai/pull/345) | ✅ Merged | **Implementation:**<br>• Redesigned dashboard layout<br>• Improved visual hierarchy<br>• Enhanced responsive design<br><br>**Impact:**<br>• Better user navigation<br>• Improved dashboard usability<br>• Enhanced visual presentation |
+| October 2025 | [Pen Tool Enhancement: Multi-mode Support with Dynamic Toolbar Icons](https://github.com/creately/creately-ai/pull/314) | ✅ Merged | **Implementation:**<br>• Added multi-mode support to Pen Tool<br>• Implemented dynamic toolbar icons<br>• Enhanced tool flexibility<br><br>**Impact:**<br>• Users can now switch pen modes seamlessly<br>• Improved drawing experience<br>• More powerful editing capabilities |
+| October 2025 | [Fixes incorrect sticky note preview colors & Transgender shape detection in genograms](https://github.com/creately/creately-ai/pull/303) | ✅ Merged | **Implementation:**<br>• Fixed sticky note color display<br>• Corrected gender shape detection<br>• Updated rendering logic<br><br>**Impact:**<br>• Fixed visual bugs in sticky notes<br>• Improved genogram accuracy<br>• Better shape recognition |
+| October 2025 | [Enhanced SVG rendering for genogram shapes in canvas previews](https://github.com/creately/creately-ai/pull/238) | ✅ Merged | **Implementation:**<br>• Improved SVG rendering performance<br>• Enhanced shape preview quality<br>• Optimized canvas rendering<br><br>**Impact:**<br>• Better visual quality of genogram previews<br>• Improved performance<br>• Enhanced user experience |
+| October 2025 | [Update primary color variables in CSS for consistent theming](https://github.com/creately/creately-ai/pull/245) | ✅ Merged | **Implementation:**<br>• Centralized color variable management<br>• Updated all color references<br>• Improved theming consistency<br><br>**Impact:**<br>• Easier theme maintenance<br>• Consistent color usage across app<br>• Better design system implementation |
+| October 2025 | [SVG Rendering for Genogram Shapes in OverlaysLayer](https://github.com/creately/creately-ai/pull/226) | ✅ Merged | **Implementation:**<br>• Implemented SVG rendering layer<br>• Created overlay system for shapes<br>• Integrated with canvas<br><br>**Impact:**<br>• Better genogram shape rendering<br>• Improved visual fidelity<br>• Enhanced diagram quality |
+| October 2025 | [Sticky notes, Shapes bg fill qa issues fixed](https://github.com/creately/creately-ai/pull/203) | ❌ Closed | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| October 2025 | [Fixed QA issues related sticky notes](https://github.com/creately/creately-ai/pull/194) | ❌ Closed | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| October 2025 | [Update PersonNode component to utilize dynamic node colors](https://github.com/creately/creately-ai/pull/169) | ✅ Merged | **Implementation:**<br>• Added dynamic color support to PersonNode<br>• Implemented color state management<br>• Updated component styling<br><br>**Impact:**<br>• Users can customize node colors<br>• Improved visual representation<br>• Better diagram customization |
+| October 2025 | [Genogram gender based shapes ](https://github.com/creately/creately-ai/pull/166) | ✅ Merged | **Implementation:**<br>• Implemented gender-based shape rendering<br>• Added shape detection logic<br>• Integrated with data models<br><br>**Impact:**<br>• Accurate genogram shape representation<br>• Better visual clarity<br>• Improved data visualization |
+| October 2025 | [Update genogram shapes ](https://github.com/creately/creately-ai/pull/142) | ✅ Merged | **Implementation:**<br>• Redesigned genogram shapes<br>• Updated shape library<br>• Improved visual consistency<br><br>**Impact:**<br>• Better shape aesthetics<br>• Improved visual hierarchy<br>• Enhanced diagram quality |
+| September 2025 | [Refactor ShapePickerTool styles and layout for improved UI consistency](https://github.com/creately/creately-ai/pull/92) | ❌ Closed | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| October 2025 | [Plus create pop up ui & ux fixed](https://github.com/creately/creately-ai/pull/129) | ✅ Merged | **Implementation:**<br>• Redesigned create popup UI<br>• Improved UX flow<br>• Enhanced visual presentation<br><br>**Impact:**<br>• Better create workflow<br>• Improved user experience<br>• Faster diagram creation |
+| October 2025 | [Apply correct Iconography](https://github.com/creately/creately-ai/pull/114) | ✅ Merged | **Implementation:**<br>• Updated icon set for consistency<br>• Applied design system icons<br>• Enhanced visual hierarchy<br><br>**Impact:**<br>• Consistent iconography across app<br>• Improved visual clarity<br>• Better user guidance |
 
 ---
 
 ### 📦 creately/creately-next
 
-* **feat: add Salesforce library support and disable React dashboard in c…** (January 1) — 🟡 Open
-  → [View PR](https://github.com/creately/creately-next/pull/16388)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
+| Date | Contribution | Status | Implementation & Impact |
+| :--- | :--- | :--- | :--- |
+| January 1 | [feat: add Salesforce library support and disable React dashboard in c…](https://github.com/creately/creately-next/pull/16388) | 🟡 Open | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
 
 ---
 
 ### 📦 creately/phoenix
 
-* **Fix email confirmation layout (hide logo section) (#9788 #9789)** (January 1) — 🟡 Open
-  → [View PR](https://github.com/creately/phoenix/pull/9810)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
-
-* **style: add object-fit: cover to landing-7 feature images** (January 1) — 🟡 Open
-  → [View PR](https://github.com/creately/phoenix/pull/9651)
-
-  📌 **Implementation & Impact:**
-     - Feature development or bug fix addressing specific use cases
-     - Contributed to improved reliability, performance, or user experience
+| Date | Contribution | Status | Implementation & Impact |
+| :--- | :--- | :--- | :--- |
+| January 1 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
+| January 1 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience |
 
 ---
 

@@ -135,16 +135,17 @@ No recent contributions to display.
     prList.sort((a, b) => new Date(b.updatedAt || b.closedAt) - new Date(a.updatedAt || a.closedAt));
 
     markdown += `### 📦 ${repo}\n\n`;
+    markdown += `| Date | Contribution | Status | Implementation & Impact |\n`;
+    markdown += `| :--- | :--- | :--- | :--- |\n`;
 
     prList.forEach((pr) => {
       const date = pr.closedAt || pr.updatedAt;
       const month = formatDate(date);
       const status = getStatusIndicator(pr);
-
-      markdown += `* **${pr.title}** (${month}) — ${status}\n`;
-      markdown += `  → [View PR](${pr.url})\n`;
+      const prLink = `[${pr.title}](${pr.url})`;
 
       // Try to find matching contribution details
+      let implementationImpact = "";
       let foundDetails = false;
       Object.entries(contributions).forEach(([contribRepo, contribList]) => {
         if (contribRepo.includes(repo.split("/")[1])) {
@@ -153,19 +154,18 @@ No recent contributions to display.
               contrib.title.toLowerCase().includes(pr.title.toLowerCase()) ||
               pr.title.toLowerCase().includes(contrib.title.toLowerCase())
             ) {
-              markdown += `\n  📌 **Implementation & Impact:**\n`;
-
               if (contrib.implementation.length > 0) {
-                markdown += `     - **What was implemented:**\n`;
+                implementationImpact += `**Implementation:**<br>`;
                 contrib.implementation.forEach((item) => {
-                  markdown += `       • ${item}\n`;
+                  implementationImpact += `• ${item}<br>`;
                 });
               }
 
               if (contrib.impact.length > 0) {
-                markdown += `     - **Impact delivered:**\n`;
+                if (implementationImpact) implementationImpact += `<br>`;
+                implementationImpact += `**Impact:**<br>`;
                 contrib.impact.forEach((item) => {
-                  markdown += `       • ${item}\n`;
+                  implementationImpact += `• ${item}<br>`;
                 });
               }
 
@@ -176,15 +176,16 @@ No recent contributions to display.
       });
 
       if (!foundDetails) {
-        markdown += `\n  📌 **Implementation & Impact:**\n`;
-        markdown += `     - Feature development or bug fix addressing specific use cases\n`;
-        markdown += `     - Contributed to improved reliability, performance, or user experience\n`;
+        implementationImpact = `• Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience`;
       }
 
-      markdown += `\n`;
+      // Clean up trailing <br>
+      implementationImpact = implementationImpact.replace(/(<br>)+$/, "");
+
+      markdown += `| ${month} | ${prLink} | ${status} | ${implementationImpact} |\n`;
     });
 
-    markdown += "---\n\n";
+    markdown += "\n---\n\n";
   });
 
   return markdown;
