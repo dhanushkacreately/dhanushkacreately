@@ -36,21 +36,26 @@ jobs:
           sudo apt install gh -y
 
       # -----------------------
-      # 4. Generate contributions
+      # 4. Configure GitHub CLI
+      # -----------------------
+      - name: Configure GitHub CLI
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      # -----------------------
+      # 5. Generate contributions
       # -----------------------
       - name: Update contributions
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-readme.js
 
       # -----------------------
-      # 5. Generate diff
+      # 6. Create diff
       # -----------------------
       - name: Create diff
         run: diff README_old.md README.md > changes.txt || true
 
       # -----------------------
-      # 6. Commit changes
+      # 7. Commit changes
       # -----------------------
       - name: Commit changes
         run: |

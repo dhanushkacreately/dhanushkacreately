@@ -6,16 +6,17 @@ const USER = "dhanushkacreately";
 const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
-function getAllMergedPrs() {
+function getAllRecentPrs() {
   try {
     return JSON.parse(
       execSync(
-        `gh search prs --author ${USER} --state closed --merged --limit 50 --json title,url,closedAt,repository`,
+        `gh search prs --author ${USER} --limit 100 --json title,url,state,closedAt,repository,updatedAt`,
         { stdio: ["ignore", "pipe", "pipe"] }
       ).toString()
     );
   } catch (error) {
     console.warn("Warning: Could not fetch PRs from GitHub CLI");
+    console.error(error.message);
     return [];
   }
 }
@@ -60,8 +61,8 @@ function parseContributionsFile() {
             currentContribution.pr = line.replace("- **PR:**", "").trim();
           } else if (line.startsWith("- **Date:**")) {
             currentContribution.date = line.replace("- **Date:**", "").trim();
-          } else if (line.startsWith("- **Tech Stack:**")) {
-            currentContribution.techStack = line.replace("- **Tech Stack:**", "").trim();
+          } else if (line.startsWith("- **Status:**")) {
+            currentContribution.status = line.replace("- **Status:**", "").trim();
           } else if (line.startsWith("- **Implementation:**")) {
             currentField = "implementation";
           } else if (line.startsWith("- **Impact:**")) {
@@ -93,6 +94,14 @@ function extractRepoName(repoUrl) {
   return repoUrl.split("/").slice(-2).join("/");
 }
 
+function getStatusIndicator(pr) {
+  const state = pr.state.toUpperCase();
+  if (state === "MERGED") return "✅ Merged";
+  if (state === "OPEN") return "🟡 Open";
+  if (state === "CLOSED") return "❌ Closed";
+  return pr.state;
+}
+
 function generateContributionsSection(prs, contributions) {
   if (prs.length === 0) {
     return `### ${formatDate(new Date())}
@@ -102,11 +111,14 @@ No recent contributions to display.
 `;
   }
 
-  // Group PRs by repository
+  // Group PRs by repository and filter for 'creately' organization
   const groupedByRepo = {};
 
   prs.forEach((pr) => {
-    const repoName = extractRepoName(pr.repository.nameWithOwner);
+    const repoNameWithOwner = pr.repository.nameWithOwner;
+    if (!repoNameWithOwner.startsWith("creately/")) return; // Only 'creately' org
+
+    const repoName = extractRepoName(repoNameWithOwner);
     if (!groupedByRepo[repoName]) {
       groupedByRepo[repoName] = [];
     }
@@ -116,14 +128,20 @@ No recent contributions to display.
   // Generate markdown
   let markdown = "";
 
-  Object.entries(groupedByRepo).forEach(([repo, prList]) => {
-    prList.sort((a, b) => new Date(b.closedAt) - new Date(a.closedAt));
+  const sortedRepos = Object.keys(groupedByRepo).sort();
+
+  sortedRepos.forEach((repo) => {
+    const prList = groupedByRepo[repo];
+    prList.sort((a, b) => new Date(b.updatedAt || b.closedAt) - new Date(a.updatedAt || a.closedAt));
 
     markdown += `### 📦 ${repo}\n\n`;
 
     prList.forEach((pr) => {
-      const month = formatDate(pr.closedAt);
-      markdown += `* **${pr.title}** (${month})\n`;
+      const date = pr.closedAt || pr.updatedAt;
+      const month = formatDate(date);
+      const status = getStatusIndicator(pr);
+
+      markdown += `* **${pr.title}** (${month}) — ${status}\n`;
       markdown += `  → [View PR](${pr.url})\n`;
 
       // Try to find matching contribution details
@@ -136,7 +154,6 @@ No recent contributions to display.
               pr.title.toLowerCase().includes(contrib.title.toLowerCase())
             ) {
               markdown += `\n  📌 **Implementation & Impact:**\n`;
-              markdown += `     - **Tech Stack:** ${contrib.techStack}\n`;
 
               if (contrib.implementation.length > 0) {
                 markdown += `     - **What was implemented:**\n`;
@@ -176,7 +193,7 @@ No recent contributions to display.
 function updateReadme() {
   try {
     let readmeContent = fs.readFileSync(README_PATH, "utf8");
-    const prs = getAllMergedPrs();
+    const prs = getAllRecentPrs();
     const contributions = parseContributionsFile();
     const newContributions = generateContributionsSection(prs, contributions);
 
