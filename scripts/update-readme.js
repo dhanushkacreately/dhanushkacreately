@@ -128,6 +128,16 @@ No recent contributions to display.
   // Generate markdown
   let markdown = "";
 
+  // Calculate metrics
+  const metrics = {
+    total: prs.length,
+    merged: prs.filter(pr => pr.state.toUpperCase() === "MERGED").length,
+    open: prs.filter(pr => pr.state.toUpperCase() === "OPEN").length,
+    closed: prs.filter(pr => pr.state.toUpperCase() === "CLOSED").length
+  };
+
+  markdown += `📊 **Total PRs:** ${metrics.total} | ✅ **Merged:** ${metrics.merged} | 🟡 **Open:** ${metrics.open} | ❌ **Closed:** ${metrics.closed}\n\n`;
+
   const sortedRepos = Object.keys(groupedByRepo).sort();
 
   sortedRepos.forEach((repo) => {
