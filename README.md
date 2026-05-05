@@ -1,6 +1,6 @@
 # Hi, I'm Dhanushka 👋
 
-Frontend-focused Engineer & UI/UX Designer working on AI-powered visual collaboration tools at Creately.
+UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 ---
 
@@ -28,7 +28,7 @@ Frontend-focused Engineer & UI/UX Designer working on AI-powered visual collabor
 * AI-driven user workflows
 * End-to-End testing & reliability
 * Complex UI interactions (diagramming / editors)
-* Product-focused engineering
+* Product-focused design
 
 ---
 
