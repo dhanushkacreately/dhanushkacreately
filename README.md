@@ -99,6 +99,7 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 ## 📫 Contact
 
 * GitHub: https://github.com/dhanushkacreately
+* Email: [dhanushka@creately.com](mailto:dhanushka@creately.com)
 
 ---
 
