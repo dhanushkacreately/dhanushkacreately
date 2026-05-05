@@ -6,7 +6,8 @@ Software, systems, and developer workflow automation.
 <!-- recent-contributions:start -->
 ## 🚀 Recent Contributions
 
-- No recent merged pull requests found yet.
+- Rewrite profile README with a polished starter template
+  → https://github.com/dhanushkacreately/dhanushkacreately/pull/1
 <!-- recent-contributions:end -->
 =======
 Welcome to my GitHub profile repository.
