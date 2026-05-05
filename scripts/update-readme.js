@@ -10,7 +10,7 @@ function getAllRecentPrs() {
   try {
     return JSON.parse(
       execSync(
-        `gh search prs --author ${USER} --limit 100 --json title,url,state,closedAt,repository,updatedAt`,
+        `gh search prs --owner creately --author ${USER} --limit 100 --sort updated --order desc --json title,url,state,closedAt,repository,updatedAt`,
         { stdio: ["ignore", "pipe", "pipe"] }
       ).toString()
     );
