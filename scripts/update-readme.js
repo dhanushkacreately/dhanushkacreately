@@ -135,8 +135,8 @@ No recent contributions to display.
     prList.sort((a, b) => new Date(b.updatedAt || b.closedAt) - new Date(a.updatedAt || a.closedAt));
 
     markdown += `### 📦 ${repo}\n\n`;
-    markdown += `| Date | Contribution | Status | Implementation & Impact |\n`;
-    markdown += `| :--- | :--- | :--- | :--- |\n`;
+    markdown += `| Date | Contribution | Status | Implementation | Impact |\n`;
+    markdown += `| :--- | :--- | :--- | :--- | :--- |\n`;
 
     prList.forEach((pr) => {
       const date = pr.closedAt || pr.updatedAt;
@@ -145,7 +145,8 @@ No recent contributions to display.
       const prLink = `[${pr.title}](${pr.url})`;
 
       // Try to find matching contribution details
-      let implementationImpact = "";
+      let implementation = "";
+      let impact = "";
       let foundDetails = false;
       Object.entries(contributions).forEach(([contribRepo, contribList]) => {
         if (contribRepo.includes(repo.split("/")[1])) {
@@ -155,17 +156,14 @@ No recent contributions to display.
               pr.title.toLowerCase().includes(contrib.title.toLowerCase())
             ) {
               if (contrib.implementation.length > 0) {
-                implementationImpact += `**Implementation:**<br>`;
                 contrib.implementation.forEach((item) => {
-                  implementationImpact += `• ${item}<br>`;
+                  implementation += `• ${item}<br>`;
                 });
               }
 
               if (contrib.impact.length > 0) {
-                if (implementationImpact) implementationImpact += `<br>`;
-                implementationImpact += `**Impact:**<br>`;
                 contrib.impact.forEach((item) => {
-                  implementationImpact += `• ${item}<br>`;
+                  impact += `• ${item}<br>`;
                 });
               }
 
@@ -176,13 +174,15 @@ No recent contributions to display.
       });
 
       if (!foundDetails) {
-        implementationImpact = `• Feature development or bug fix addressing specific use cases<br>• Contributed to improved reliability, performance, or user experience`;
+        implementation = `• Feature development or bug fix addressing specific use cases`;
+        impact = `• Improved reliability, performance, or user experience`;
       }
 
       // Clean up trailing <br>
-      implementationImpact = implementationImpact.replace(/(<br>)+$/, "");
+      implementation = implementation.replace(/(<br>)+$/, "");
+      impact = impact.replace(/(<br>)+$/, "");
 
-      markdown += `| ${month} | ${prLink} | ${status} | ${implementationImpact} |\n`;
+      markdown += `| ${month} | ${prLink} | ${status} | ${implementation} | ${impact} |\n`;
     });
 
     markdown += "\n---\n\n";
