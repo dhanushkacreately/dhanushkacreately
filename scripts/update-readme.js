@@ -10,7 +10,7 @@ function getAllRecentPrs() {
   try {
     return JSON.parse(
       execSync(
-        `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,repository,updatedAt`,
+        `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
         { stdio: ["ignore", "pipe", "pipe"] }
       ).toString()
     );
@@ -149,7 +149,7 @@ No recent contributions to display.
     markdown += `| :--- | :--- | :--- | :--- | :--- |\n`;
 
     prList.forEach((pr) => {
-      const date = pr.closedAt || pr.updatedAt;
+      const date = pr.createdAt;
       const month = formatDate(date);
       const status = getStatusIndicator(pr);
       const prLink = `[${pr.title}](${pr.url})`;

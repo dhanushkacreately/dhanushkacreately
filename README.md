@@ -43,7 +43,7 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| January 1 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| April 2026 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | January 2026 | [Dashboard Terminology and UX Clarity Improvements](https://github.com/creately/creately-ai/pull/611) | ✅ Merged | • Refined dashboard terminology for better user understanding<br>• Improved UX clarity across key workflows<br>• Enhanced onboarding flows | • Reduced user confusion by 35%<br>• Increased user engagement on dashboard<br>• Improved feature discovery |
 | November 2025 | [Add custom SVG icon for ShapeSwitchTool toolbar button. ](https://github.com/creately/creately-ai/pull/500) | ✅ Merged | • Designed and integrated custom SVG icon<br>• Updated toolbar button styling<br>• Ensured consistency with design system | • Improved visual clarity of shape switching feature<br>• Better UX in diagram creation<br>• Enhanced toolbar usability |
 | November 2025 | [Quick Create Panel & relationship selection](https://github.com/creately/creately-ai/pull/496) | ✅ Merged | • Built Quick Create Panel component<br>• Implemented relationship selection logic<br>• Integrated with diagram creation flow | • Reduced diagram creation time by 40%<br>• Improved user workflow efficiency<br>• Increased feature adoption |
@@ -73,7 +73,7 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 | October 2025 | [Update genogram shapes ](https://github.com/creately/creately-ai/pull/142) | ✅ Merged | • Redesigned genogram shapes<br>• Updated shape library<br>• Improved visual consistency | • Better shape aesthetics<br>• Improved visual hierarchy<br>• Enhanced diagram quality |
 | September 2025 | [Refactor ShapePickerTool styles and layout for improved UI consistency](https://github.com/creately/creately-ai/pull/92) | ❌ Closed | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | October 2025 | [Plus create pop up ui & ux fixed](https://github.com/creately/creately-ai/pull/129) | ✅ Merged | • Redesigned create popup UI<br>• Improved UX flow<br>• Enhanced visual presentation | • Better create workflow<br>• Improved user experience<br>• Faster diagram creation |
-| October 2025 | [Apply correct Iconography](https://github.com/creately/creately-ai/pull/114) | ✅ Merged | • Updated icon set for consistency<br>• Applied design system icons<br>• Enhanced visual hierarchy | • Consistent iconography across app<br>• Improved visual clarity<br>• Better user guidance |
+| September 2025 | [Apply correct Iconography](https://github.com/creately/creately-ai/pull/114) | ✅ Merged | • Updated icon set for consistency<br>• Applied design system icons<br>• Enhanced visual hierarchy | • Consistent iconography across app<br>• Improved visual clarity<br>• Better user guidance |
 
 ---
 
@@ -81,7 +81,7 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| January 1 | [feat: add Salesforce library support and disable React dashboard in c…](https://github.com/creately/creately-next/pull/16388) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| April 2026 | [feat: add Salesforce library support and disable React dashboard in c…](https://github.com/creately/creately-next/pull/16388) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
 ---
 
@@ -89,8 +89,8 @@ Frontend-focused engineer working on AI-powered visual collaboration tools at Cr
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| January 1 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
-| January 1 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| April 2026 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
 ---
 
