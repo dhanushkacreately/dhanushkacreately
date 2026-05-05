@@ -75,11 +75,11 @@ jobs:
           secure: true
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "GitHub Profile Updated - Weekly Report"
-          to: your-email@gmail.com
+          subject: "GitHub Profile Updated - Daily Report"
+          to: dhanushka@creately.com
           from: GitHub Actions <${{ secrets.EMAIL_USER }}>
           body: |
-            🚀 Weekly GitHub Profile Update
+            🚀 Daily GitHub Profile Update
 
             Your profile README has been updated.
 
