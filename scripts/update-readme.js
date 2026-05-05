@@ -7,18 +7,11 @@ const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
 function getAllRecentPrs() {
-  try {
-    return JSON.parse(
-      execSync(
-        `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
-        { stdio: ["ignore", "pipe", "pipe"] }
-      ).toString()
-    );
-  } catch (error) {
-    console.warn("Warning: Could not fetch PRs from GitHub CLI");
-    console.error(error.message);
-    return [];
-  }
+  const output = execSync(
+    `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
+    { stdio: ["ignore", "pipe", "pipe"] }
+  ).toString();
+  return JSON.parse(output);
 }
 
 function parseContributionsFile() {
@@ -108,9 +101,14 @@ function getStatusIndicator(pr) {
 
 function generateContributionsSection(prs, contributions) {
   if (prs.length === 0) {
+    const hasContributionRegistry = Object.keys(contributions).length > 0;
+    const emptyMessage = hasContributionRegistry
+      ? "No live PRs were returned by GitHub search. This usually means the workflow token does not have access to all repositories."
+      : "No recent contributions to display.";
+
     return `### ${formatDate(new Date())}
 
-No recent contributions to display.
+${emptyMessage}
 
 `;
   }
@@ -211,6 +209,11 @@ function updateReadme() {
   try {
     let readmeContent = fs.readFileSync(README_PATH, "utf8");
     const prs = getAllRecentPrs();
+    if (prs.length === 0) {
+      throw new Error(
+        "No PRs returned from GitHub search. Refusing to overwrite README with an empty contributions section."
+      );
+    }
     const contributions = parseContributionsFile();
     const newContributions = generateContributionsSection(prs, contributions);
 
