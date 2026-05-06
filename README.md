@@ -34,7 +34,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 ## 🚀 All Contributions
 
-**All PRs across all projects - Updated daily at 12 PM**
+**All PRs across all projects - Updated hourly**
 
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |

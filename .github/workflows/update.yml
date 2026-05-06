@@ -70,7 +70,7 @@ jobs:
           git push
 
       # -----------------------
-      # 7. Send email (SMTP)
+      # 8. Send email (SMTP)
       # -----------------------
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
@@ -90,7 +90,7 @@ jobs:
 
             � View your GitHub profile: https://github.com/dhanushkacreately
 
-            �📌 Summary:
+            �� Summary:
             - Contributions section refreshed
             - Latest merged PRs included
 
