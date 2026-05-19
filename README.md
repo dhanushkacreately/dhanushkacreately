@@ -39,7 +39,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 37 | 26 | 7 | 4 |
+| 39 | 27 | 8 | 4 |
 
 ### 📦 creately/creately-ai
 
@@ -88,6 +88,14 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 ---
 
+### 📦 creately/general-shape-code
+
+| Date | Contribution | Status | Implementation | Impact |
+| :--- | :--- | :--- | :--- | :--- |
+| 20 April 2026 | [feat: add comprehensive Salesforce shape library including cards, doc…](https://github.com/creately/general-shape-code/pull/1201) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+
+---
+
 ### 📦 creately/phoenix
 
 | Date | Contribution | Status | Implementation | Impact |
@@ -96,6 +104,14 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 | 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues #1518](https://github.com/creately/phoenix/pull/9872) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 9 April 2026 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+
+---
+
+### 📦 creately/team-portal
+
+| Date | Contribution | Status | Implementation | Impact |
+| :--- | :--- | :--- | :--- | :--- |
+| 7 November 2025 | [Update favicon.ico](https://github.com/creately/team-portal/pull/391) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
 ---
 
