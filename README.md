@@ -39,7 +39,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 40 | 28 | 8 | 4 |
+| 40 | 29 | 7 | 4 |
 
 ### 📦 creately/creately-ai
 
@@ -100,7 +100,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 18 May 2026 | [Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues #1518](https://github.com/creately/phoenix/pull/9872) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
