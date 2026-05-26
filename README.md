@@ -39,12 +39,13 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 42 | 29 | 9 | 4 |
+| 43 | 29 | 10 | 4 |
 
 ### 📦 creately/creately-ai
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 26 May 2026 | [fix: enable auto-layout by default when opening or creating a scenario](https://github.com/creately/creately-ai/pull/1622) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 7 May 2026 | [Remove close buttons from Sign Up and Demo Email Verify pages](https://github.com/creately/creately-ai/pull/1526) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 April 2026 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 5 January 2026 | [Dashboard Terminology and UX Clarity Improvements](https://github.com/creately/creately-ai/pull/611) | ✅ Merged | • Refined dashboard terminology for better user understanding<br>• Improved UX clarity across key workflows<br>• Enhanced onboarding flows | • Reduced user confusion by 35%<br>• Increased user engagement on dashboard<br>• Improved feature discovery |
