@@ -39,7 +39,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 44 | 29 | 11 | 4 |
+| 45 | 29 | 12 | 4 |
 
 ### 📦 creately/creately-ai
 
@@ -103,6 +103,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 29 May 2026 | [Update Log In translations and layout text](https://github.com/creately/phoenix/pull/10090) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 May 2026 | [fix: remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortcodes](https://github.com/creately/phoenix/pull/10086) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 18 May 2026 | [Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
