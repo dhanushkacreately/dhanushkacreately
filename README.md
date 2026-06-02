@@ -39,12 +39,13 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 45 | 29 | 12 | 4 |
+| 46 | 30 | 12 | 4 |
 
 ### 📦 creately/creately-ai
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 2 June 2026 | [[Creately AI]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps  ](https://github.com/creately/creately-ai/pull/1647) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 26 May 2026 | [fix: enable auto-layout by default when opening or creating a scenario](https://github.com/creately/creately-ai/pull/1622) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 7 May 2026 | [Remove close buttons from Sign Up and Demo Email Verify pages](https://github.com/creately/creately-ai/pull/1526) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 April 2026 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
@@ -103,7 +104,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| 29 May 2026 | [Update Log In translations and layout text](https://github.com/creately/phoenix/pull/10090) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 29 May 2026 | [Update Log In translations and layout text](https://github.com/creately/phoenix/pull/10090) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 May 2026 | [fix: remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortcodes](https://github.com/creately/phoenix/pull/10086) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 18 May 2026 | [Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
