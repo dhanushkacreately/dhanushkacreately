@@ -1,8 +1,10 @@
-name: Update Profile Contributions + Email Report
+name: Update Profile Contributions
 
 on:
+  # Scheduled workflows only run from the repository default branch.
+  # After this workflow is merged there, GitHub will attempt it hourly (UTC).
   schedule:
-    - cron: "0 * * * *" # every hour
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,31 +15,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # -----------------------
-      # 1. Checkout repo
-      # -----------------------
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # -----------------------
-      # 2. Setup Node
-      # -----------------------
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "18"
 
-      # -----------------------
-      # 3. Install GitHub CLI
-      # -----------------------
-      - name: Install GitHub CLI
-        run: |
-          sudo apt update
-          sudo apt install gh -y
-
-      # -----------------------
-      # 4. Configure GitHub CLI
-      # -----------------------
+      # GitHub-hosted Ubuntu runners include GitHub CLI.
       - name: Configure GitHub CLI
         run: |
           if [ -z "${{ secrets.GH_PAT }}" ]; then
@@ -46,33 +32,47 @@ jobs:
           fi
           echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
 
-      # -----------------------
-      # 5. Generate contributions
-      # -----------------------
       - name: Update contributions
         run: node scripts/update-readme.js
 
-      # -----------------------
-      # 6. Create diff
-      # -----------------------
-      - name: Create diff
-        run: diff README_old.md README.md > changes.txt || true
+      - name: Create diff summary
+        id: diff
+        run: |
+          {
+            echo 'content<<EOF'
+            git diff -- README.md | sed -n '1,200p'
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
 
-      # -----------------------
-      # 7. Commit changes
-      # -----------------------
       - name: Commit changes
+        id: commit
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add README.md
-          git commit -m "chore: update profile contributions" || exit 0
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No README changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update profile contributions"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      # -----------------------
-      # 8. Send email (SMTP)
-      # -----------------------
+      - name: Check email configuration
+        id: email_config
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        run: |
+          if [ -n "$EMAIL_USER" ] && [ -n "$EMAIL_PASS" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Send email notification
+        if: steps.commit.outputs.changed == 'true' && steps.email_config.outputs.enabled == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -80,19 +80,19 @@ jobs:
           secure: true
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "GitHub Profile Updated - Daily Report"
+          subject: "GitHub Profile Updated - Hourly Report"
           to: dhanushka@creately.com
           from: GitHub Actions <${{ secrets.EMAIL_USER }}>
           body: |
-            🚀 Daily GitHub Profile Update
+            🚀 GitHub Profile Update
 
-            Your profile README has been updated.
+            Your profile README has been refreshed.
 
-            � View your GitHub profile: https://github.com/dhanushkacreately
+            View your GitHub profile: https://github.com/dhanushkacreately
 
-            �� Summary:
+            Summary:
             - Contributions section refreshed
-            - Latest merged PRs included
+            - Latest PR data included
 
-            📄 Diff:
+            Diff:
             ${{ steps.diff.outputs.content }}

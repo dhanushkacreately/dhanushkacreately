@@ -78,6 +78,10 @@ function parseContributionsFile() {
   }
 }
 
+function formatRefreshTimestamp(date = new Date()) {
+  return date.toISOString().replace("T", " ").replace(/\.\d{3}Z$/, " UTC");
+}
+
 function formatDate(dateString) {
   const date = new Date(dateString);
   if (isNaN(date.getTime())) return dateString;
@@ -128,7 +132,7 @@ ${emptyMessage}
   });
 
   // Generate markdown
-  let markdown = "";
+  let markdown = `> Last refreshed: ${formatRefreshTimestamp()}\n\n`;
 
   // Calculate metrics
   const metrics = {
