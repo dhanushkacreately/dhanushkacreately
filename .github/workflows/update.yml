@@ -27,52 +27,128 @@ jobs:
         with:
           node-version: "18"
 
+      - name: Create README backup
+        run: cp README.md README_old.md
+
       # -----------------------
       # 3. Install GitHub CLI
       # -----------------------
       - name: Install GitHub CLI
+        id: install_gh
+        continue-on-error: true
         run: |
-          sudo apt update
-          sudo apt install gh -y
+          set -o pipefail
+          {
+            sudo apt update
+            sudo apt install gh -y
+          } 2>&1 | tee install-gh.log
 
       # -----------------------
       # 4. Configure GitHub CLI
       # -----------------------
       - name: Configure GitHub CLI
+        id: configure_gh
+        if: steps.install_gh.outcome == 'success'
+        continue-on-error: true
         run: |
+          set -o pipefail
           if [ -z "${{ secrets.GH_PAT }}" ]; then
             echo "Missing required secret GH_PAT (repo/org PAT with PR read access)."
             exit 1
           fi
-          echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
+          echo "${{ secrets.GH_PAT }}" | gh auth login --with-token 2>&1 | tee configure-gh.log
 
       # -----------------------
       # 5. Generate contributions
       # -----------------------
       - name: Update contributions
-        run: node scripts/update-readme.js
+        id: update_contributions
+        if: steps.install_gh.outcome == 'success' && steps.configure_gh.outcome == 'success'
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          node scripts/update-readme.js 2>&1 | tee update-readme.log
 
       # -----------------------
       # 6. Create diff
       # -----------------------
       - name: Create diff
+        if: steps.update_contributions.outcome == 'success'
         run: diff README_old.md README.md > changes.txt || true
 
       # -----------------------
       # 7. Commit changes
       # -----------------------
       - name: Commit changes
+        id: commit_changes
+        if: steps.update_contributions.outcome == 'success'
+        continue-on-error: true
         run: |
+          set -o pipefail
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add README.md
-          git commit -m "chore: update profile contributions" || exit 0
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update profile contributions"
+          git push 2>&1 | tee commit.log
+
+      - name: Build email content
+        id: email_content
+        if: always()
+        run: |
+          STATUS="success"
+          REASON="README update completed successfully."
+          LOG_FILE=""
+
+          if [ "${{ steps.install_gh.outcome }}" = "failure" ]; then
+            STATUS="failure"
+            REASON="Installing GitHub CLI failed."
+            LOG_FILE="install-gh.log"
+          elif [ "${{ steps.configure_gh.outcome }}" = "failure" ]; then
+            STATUS="failure"
+            REASON="GitHub CLI authentication failed."
+            LOG_FILE="configure-gh.log"
+          elif [ "${{ steps.update_contributions.outcome }}" = "failure" ]; then
+            STATUS="failure"
+            REASON="Contribution refresh failed."
+            LOG_FILE="update-readme.log"
+          elif [ "${{ steps.commit_changes.outcome }}" = "failure" ]; then
+            STATUS="failure"
+            REASON="Commit or push failed."
+            LOG_FILE="commit.log"
+          fi
+
+          {
+            echo "status=${STATUS}"
+            echo "subject=GitHub Profile Update - ${STATUS^^}"
+            echo "body<<EOF"
+            echo "GitHub Profile Update Report"
+            echo
+            echo "Status: ${STATUS}"
+            echo "Repository: ${{ github.repository }}"
+            echo "Workflow: ${{ github.workflow }}"
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo "Reason: ${REASON}"
+            echo
+            if [ -n "${LOG_FILE}" ] && [ -f "${LOG_FILE}" ]; then
+              echo "Failure details:"
+              tail -n 50 "${LOG_FILE}"
+            elif [ "${STATUS}" = "success" ]; then
+              echo "Summary:"
+              echo "- Contributions section refreshed"
+              echo "- Latest PR data included"
+            else
+              echo "Failure details were not captured in a log file."
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       # -----------------------
       # 8. Send email (SMTP)
       # -----------------------
       - name: Send email notification
+        if: always()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -80,19 +156,13 @@ jobs:
           secure: true
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "GitHub Profile Updated - Daily Report"
+          subject: ${{ steps.email_content.outputs.subject }}
           to: dhanushka@creately.com
           from: GitHub Actions <${{ secrets.EMAIL_USER }}>
-          body: |
-            🚀 Daily GitHub Profile Update
+          body: ${{ steps.email_content.outputs.body }}
 
-            Your profile README has been updated.
-
-            � View your GitHub profile: https://github.com/dhanushkacreately
-
-            �� Summary:
-            - Contributions section refreshed
-            - Latest merged PRs included
-
-            📄 Diff:
-            ${{ steps.diff.outputs.content }}
+      - name: Fail workflow if update failed
+        if: always() && (steps.install_gh.outcome == 'failure' || steps.configure_gh.outcome == 'failure' || steps.update_contributions.outcome == 'failure' || steps.commit_changes.outcome == 'failure')
+        run: |
+          echo "${{ steps.email_content.outputs.body }}"
+          exit 1

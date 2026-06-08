@@ -6,12 +6,25 @@ const USER = "dhanushkacreately";
 const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
+function formatCommandFailure(error, context) {
+  const stderr = error.stderr ? error.stderr.toString().trim() : "";
+  const stdout = error.stdout ? error.stdout.toString().trim() : "";
+  const details = stderr || stdout || error.message;
+
+  return new Error(`${context}: ${details}`);
+}
+
 function getAllRecentPrs() {
-  const output = execSync(
-    `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
-    { stdio: ["ignore", "pipe", "pipe"] }
-  ).toString();
-  return JSON.parse(output);
+  try {
+    const output = execSync(
+      `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
+      { stdio: ["ignore", "pipe", "pipe"] }
+    ).toString();
+
+    return JSON.parse(output);
+  } catch (error) {
+    throw formatCommandFailure(error, "GitHub PR search failed");
+  }
 }
 
 function parseContributionsFile() {
@@ -243,4 +256,3 @@ function updateReadme() {
 }
 
 updateReadme();
-
