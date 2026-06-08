@@ -224,7 +224,7 @@ function updateReadme() {
     const prs = getAllRecentPrs();
     if (prs.length === 0) {
       throw new Error(
-        "No PRs returned from GitHub search. Refusing to overwrite README with an empty contributions section."
+        "No PRs returned from GitHub search for owner=creately and author=dhanushkacreately. This usually means the token does not have access to the Creately repositories, the token is not SSO-authorized for the Creately org, or the author filter does not match the PR author login. Refusing to overwrite README with an empty contributions section."
       );
     }
     const contributions = parseContributionsFile();
