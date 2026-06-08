@@ -39,7 +39,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 49 | 30 | 15 | 4 |
+| 49 | 32 | 13 | 4 |
 
 ### 📦 creately/creately-ai
 
@@ -86,8 +86,8 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 21 May 2026 | [Add family tree library](https://github.com/creately/creately-next/pull/16406) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 2 June 2026 | [[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/creately-next/pull/16414) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
-| 21 May 2026 | [Add family tree library](https://github.com/creately/creately-next/pull/16406) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 April 2026 | [feat: add Salesforce library support and disable React dashboard in c…](https://github.com/creately/creately-next/pull/16388) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
 ---
@@ -96,7 +96,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| 21 May 2026 | [Add family tree library](https://github.com/creately/general-shape-code/pull/1203) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 21 May 2026 | [Add family tree library](https://github.com/creately/general-shape-code/pull/1203) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 April 2026 | [feat: add comprehensive Salesforce shape library including cards, doc…](https://github.com/creately/general-shape-code/pull/1201) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
 ---
