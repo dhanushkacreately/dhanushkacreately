@@ -15,10 +15,11 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 ## 🛠️ Tech Stack
 
-* **Languages:** JavaScript, TypeScript
-* **Frontend:** React, HTML, CSS
-* **Backend:** Node.js
+* **Languages:** JavaScript, TypeScript, Java
+* **Frontend:** React, HTML, CSS, SCSS
+* **Backend:** Node.js, Java
 * **Testing:** Playwright (E2E)
+* **DevOps:** Docker, GitHub Actions
 * **Tools:** Git, GitHub, Figma
 
 ---
