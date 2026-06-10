@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 49 | 32 | 13 | 4 |
+| 51 | 32 | 15 | 4 |
 
 ### 📦 creately/creately-ai
 
@@ -93,6 +93,14 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 ---
 
+### 📦 creately/diagram-community
+
+| Date | Contribution | Status | Implementation | Impact |
+| :--- | :--- | :--- | :--- | :--- |
+| 10 June 2026 | [Revert PR #886 diagram example A/B test](https://github.com/creately/diagram-community/pull/952) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+
+---
+
 ### 📦 creately/general-shape-code
 
 | Date | Contribution | Status | Implementation | Impact |
@@ -114,6 +122,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 10 June 2026 | [Revert homepage hero GIF A/B test changes](https://github.com/creately/phoenix/pull/10169) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 4 June 2026 | [[Phoenix] Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/phoenix/pull/10132) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 May 2026 | [Update Log In translations and layout text](https://github.com/creately/phoenix/pull/10090) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 May 2026 | [fix: remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortcodes](https://github.com/creately/phoenix/pull/10086) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
