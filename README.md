@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 52 | 32 | 16 | 4 |
+| 52 | 33 | 15 | 4 |
 
 ### 📦 creately/creately-ai
 
@@ -122,7 +122,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| 11 June 2026 | [Exclude UK home hreflang alternate links](https://github.com/creately/phoenix/pull/10174) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 11 June 2026 | [Exclude UK home hreflang alternate links](https://github.com/creately/phoenix/pull/10174) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 10 June 2026 | [Revert homepage hero GIF A/B test changes](https://github.com/creately/phoenix/pull/10169) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 4 June 2026 | [[Phoenix] Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/phoenix/pull/10132) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 May 2026 | [Update Log In translations and layout text](https://github.com/creately/phoenix/pull/10090) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
