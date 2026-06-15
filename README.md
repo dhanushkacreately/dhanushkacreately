@@ -40,13 +40,14 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 53 | 35 | 14 | 4 |
+| 54 | 35 | 14 | 5 |
 
 ### 📦 creately/creately-ai
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/creately-ai/pull/1526) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 15 June 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/creately-ai/pull/1678) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/creately-ai/pull/1526) | ❌ Closed | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 15 June 2026 | [feat: add source choice modal for Org Chart template](https://github.com/creately/creately-ai/pull/1672) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 2 June 2026 | [[Creately AI]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps  ](https://github.com/creately/creately-ai/pull/1647) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 26 May 2026 | [fix: enable auto-layout by default when opening or creating a scenario](https://github.com/creately/creately-ai/pull/1622) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
