@@ -40,15 +40,16 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 52 | 35 | 13 | 4 |
+| 53 | 35 | 14 | 4 |
 
 ### 📦 creately/creately-ai
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/creately-ai/pull/1526) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
+| 15 June 2026 | [feat: add source choice modal for Org Chart template](https://github.com/creately/creately-ai/pull/1672) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 2 June 2026 | [[Creately AI]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps  ](https://github.com/creately/creately-ai/pull/1647) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 26 May 2026 | [fix: enable auto-layout by default when opening or creating a scenario](https://github.com/creately/creately-ai/pull/1622) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
-| 7 May 2026 | [Remove close buttons from Sign Up and Demo Email Verify pages](https://github.com/creately/creately-ai/pull/1526) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 April 2026 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 5 January 2026 | [Dashboard Terminology and UX Clarity Improvements](https://github.com/creately/creately-ai/pull/611) | ✅ Merged | • Refined dashboard terminology for better user understanding<br>• Improved UX clarity across key workflows<br>• Enhanced onboarding flows | • Reduced user confusion by 35%<br>• Increased user engagement on dashboard<br>• Improved feature discovery |
 | 25 November 2025 | [Add custom SVG icon for ShapeSwitchTool toolbar button. ](https://github.com/creately/creately-ai/pull/500) | ✅ Merged | • Designed and integrated custom SVG icon<br>• Updated toolbar button styling<br>• Ensured consistency with design system | • Improved visual clarity of shape switching feature<br>• Better UX in diagram creation<br>• Enhanced toolbar usability |
@@ -122,6 +123,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/phoenix/pull/9872) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 10 June 2026 | [Revert homepage hero GIF A/B test changes](https://github.com/creately/phoenix/pull/10169) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 11 June 2026 | [Exclude UK home hreflang alternate links](https://github.com/creately/phoenix/pull/10174) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 4 June 2026 | [[Phoenix] Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/phoenix/pull/10132) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
@@ -129,7 +131,6 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 | 29 May 2026 | [fix: remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortcodes](https://github.com/creately/phoenix/pull/10086) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 18 May 2026 | [Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
-| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues #1518](https://github.com/creately/phoenix/pull/9872) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 29 April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 9 April 2026 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
