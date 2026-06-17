@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 54 | 35 | 14 | 5 |
+| 55 | 35 | 15 | 5 |
 
 ### 📦 creately/creately-ai
 
@@ -89,6 +89,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 17 June 2026 | [feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting](https://github.com/creately/creately-next/pull/16422) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 21 May 2026 | [Add family tree library](https://github.com/creately/creately-next/pull/16406) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 2 June 2026 | [[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/creately-next/pull/16414) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 April 2026 | [feat: add Salesforce library support and disable React dashboard in c…](https://github.com/creately/creately-next/pull/16388) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
