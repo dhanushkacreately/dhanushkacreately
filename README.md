@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
 | :---: | :---: | :---: | :---: |
-| 55 | 35 | 15 | 5 |
+| 55 | 36 | 14 | 5 |
 
 ### 📦 creately/creately-ai
 
@@ -125,6 +125,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 | Date | Contribution | Status | Implementation | Impact |
 | :--- | :--- | :--- | :--- | :--- |
+| 29 April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/phoenix/pull/9872) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 10 June 2026 | [Revert homepage hero GIF A/B test changes](https://github.com/creately/phoenix/pull/10169) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 11 June 2026 | [Exclude UK home hreflang alternate links](https://github.com/creately/phoenix/pull/10174) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
@@ -133,7 +134,6 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 | 29 May 2026 | [fix: remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortcodes](https://github.com/creately/phoenix/pull/10086) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 18 May 2026 | [Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985) | ✅ Merged | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
-| 29 April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 | 9 April 2026 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Feature development or bug fix addressing specific use cases | • Improved reliability, performance, or user experience |
 
 ---
