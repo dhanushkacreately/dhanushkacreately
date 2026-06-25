@@ -103,16 +103,9 @@ function fetchPrDetails(prUrl) {
   }
 }
 
-function truncate(str, maxLen = 55) {
-  return str.length > maxLen ? str.slice(0, maxLen) + "…" : str;
-}
-
 function generateImplementationImpact(prDetails, prTitle) {
   if (!prDetails) {
-    return {
-      implementation: "Feature development or bug fix",
-      impact: "Improved reliability, performance, or UX",
-    };
+    return { implementation: "Bug fix / feature", impact: "Reliability & UX" };
   }
 
   const labels = prDetails.labels.map((l) => l.name.toLowerCase());
@@ -125,73 +118,43 @@ function generateImplementationImpact(prDetails, prTitle) {
     labels.some((l) => /^(fix|bug)$/.test(l)) || /^fix/i.test(prTitle);
   const isChore =
     labels.some((l) => /^chore$/.test(l)) || /^chore/i.test(prTitle);
-  const isRefactor =
-    labels.some((l) => /^refactor$/.test(l)) || /^refactor/i.test(prTitle);
 
-  const areas = [
-    ...new Set(
-      files
-        .map((f) => {
-          const parts = f.split("/");
-          if (parts[0] === "src" && parts[1]) return parts[1];
-          if (
-            parts[0] !== "node_modules" &&
-            parts[0] !== ".github" &&
-            parts[0] !== ".yarn" &&
-            !parts[0].startsWith(".")
-          )
-            return parts[0];
-          return null;
-        })
-        .filter(Boolean)
-    ),
-  ].slice(0, 1);
+  const area = files
+    .map((f) => {
+      const parts = f.split("/");
+      if (parts[0] === "src" && parts[1]) return parts[1];
+      if (parts[0] !== "node_modules" && parts[0] !== ".github" && parts[0] !== ".yarn" && !parts[0].startsWith(".")) return parts[0];
+      return null;
+    })
+    .find(Boolean) || "";
 
-  const commitMsgs = commits
+  const commitMsg = commits
     .map((c) => c.messageHeadline)
     .filter(Boolean)
-    .map((msg) =>
-      msg.replace(
-        /^(feat|fix|chore|refactor|docs|style|test|perf|build|ci)(\(.*?\))?:\s*/i,
-        ""
-      )
-    )
-    .filter((msg) => msg.length > 5);
+    .map((msg) => msg.replace(/^(feat|fix|chore|refactor|docs|style|test|perf|build|ci)(\(.*?\))?:\s*/i, ""))
+    .find((msg) => msg.length > 5);
 
   let implementation;
   let impact;
 
-  if (commitMsgs.length > 0) {
-    implementation = truncate(
-      commitMsgs[0].charAt(0).toUpperCase() + commitMsgs[0].slice(1)
-    );
+  if (commitMsg) {
+    implementation = commitMsg.charAt(0).toUpperCase() + commitMsg.slice(1);
   } else if (isFeature) {
-    implementation = truncate(
-      prTitle.replace(/^feat(\(.*?\))?:\s*/i, "").trim()
-    );
+    implementation = prTitle.replace(/^feat(\(.*?\))?:\s*/i, "").trim();
   } else if (isFix) {
-    implementation = truncate(
-      prTitle.replace(/^fix(\(.*?\))?:\s*/i, "").trim()
-    );
+    implementation = prTitle.replace(/^fix(\(.*?\))?:\s*/i, "").trim();
   } else {
-    implementation = truncate(prTitle);
+    implementation = prTitle;
   }
 
-  if (isFeature) {
-    impact = "New capability for end users";
-  } else if (isFix) {
-    impact = "Improved application reliability";
-  } else if (isRefactor) {
-    impact = "Improved code maintainability";
-  } else if (isChore) {
-    impact = "Maintenance and dependency updates";
-  } else {
-    impact = "Improved reliability, performance, or UX";
-  }
+  if (implementation.length > 45) implementation = implementation.slice(0, 42) + "…";
 
-  if (areas.length > 0) {
-    impact += ` (${areas[0]})`;
-  }
+  if (isFeature) impact = "New capability";
+  else if (isFix) impact = "Reliability";
+  else if (isChore) impact = "Maintenance";
+  else impact = "Reliability & UX";
+
+  if (area) impact += ` (${area})`;
 
   return { implementation, impact };
 }
@@ -321,9 +284,9 @@ ${emptyMessage}
     closed: prs.filter(pr => pr.state.toUpperCase() === "CLOSED").length
   };
 
-  markdown += `| 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |\n`;
-  markdown += `| :---: | :---: | :---: | :---: |\n`;
-  markdown += `| ${metrics.total} | ${metrics.merged} | ${metrics.open} | ${metrics.closed} |\n\n`;
+  markdown += `<table>\n<tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>\n`;
+  markdown += `<tr><td>${metrics.total}</td><td>${metrics.merged}</td><td>${metrics.open}</td><td>${metrics.closed}</td></tr>\n`;
+  markdown += `</table>\n\n`;
 
   const sortedRepos = Object.keys(groupedByRepo).sort();
 
@@ -332,14 +295,16 @@ ${emptyMessage}
     prList.sort((a, b) => new Date(b.updatedAt || b.closedAt) - new Date(a.updatedAt || a.closedAt));
 
     markdown += `### 📦 ${repo}\n\n`;
-    markdown += `| Date | Contribution | Status | Implementation | Impact |\n`;
-    markdown += `| :--- | :--- | :--- | :--- | :--- |\n`;
+    markdown += `<table>\n`;
+    markdown += `<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>\n`;
+    markdown += `<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>\n`;
 
     prList.forEach((pr) => {
       const date = pr.createdAt;
       const month = formatDate(date);
       const status = getStatusIndicator(pr);
-      const prLink = `[${pr.title}](${pr.url})`;
+      const shortTitle = pr.title.length > 40 ? pr.title.slice(0, 37) + "…" : pr.title;
+      const prLink = `[${shortTitle}](${pr.url})`;
 
       // Try to find matching contribution details
       let implementation = "";
@@ -388,10 +353,10 @@ ${emptyMessage}
         }
       }
 
-      markdown += `| ${month} | ${prLink} | ${status} | ${implementation} | ${impact} |\n`;
+      markdown += `<tr><td>${month}</td><td>${prLink}</td><td>${status}</td><td>${implementation}</td><td>${impact}</td></tr>\n`;
     });
 
-    markdown += "\n---\n\n";
+    markdown += "</table>\n\n---\n\n";
   });
 
   return markdown;
