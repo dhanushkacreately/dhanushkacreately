@@ -303,8 +303,7 @@ ${emptyMessage}
       const date = pr.createdAt;
       const month = formatDate(date);
       const status = getStatusIndicator(pr);
-      const shortTitle = pr.title.length > 40 ? pr.title.slice(0, 37) + "…" : pr.title;
-      const prLink = `[${shortTitle}](${pr.url})`;
+      const prLink = `[${pr.title}](${pr.url})`;
 
       // Try to find matching contribution details
       let implementation = "";
