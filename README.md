@@ -38,111 +38,126 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 **All PRs across all projects - Updated hourly**
 
 <!-- AUTO-GENERATED SECTION START -->
-| 📊 Total PRs | ✅ Merged | 🟡 Open | ❌ Closed |
-| :---: | :---: | :---: | :---: |
-| 55 | 36 | 14 | 5 |
+<table>
+<tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
+<tr><td>55</td><td>36</td><td>14</td><td>5</td></tr>
+</table>
 
 ### 📦 creately/creately-ai
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 15 June 2026 | [feat: add source choice modal for Org Chart template](https://github.com/creately/creately-ai/pull/1672) | 🟡 Open | • Add source choice modal for Org Chart template | • New capability for end users |
-| 15 June 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/creately-ai/pull/1678) | 🟡 Open | • Update OnboardingDialog to show close button based on SignUp page ins…• Update OnboardingDialog to show close button based on SignUp page ins… | • Improved reliability, performance, or user experience• Improved reliability, performance, or user experience |
-| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/creately-ai/pull/1526) | ❌ Closed | • Update OnboardingDialog to show close button based on SignUp page ins…• Update OnboardingDialog to show close button based on SignUp page ins… | • Improved reliability, performance, or user experience• Improved reliability, performance, or user experience |
-| 2 June 2026 | [[Creately AI]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps  ](https://github.com/creately/creately-ai/pull/1647) | 🟡 Open | • Implement shape usage tracking and limits in the Entitlements system | • Improved reliability, performance, or user experience |
-| 26 May 2026 | [fix: enable auto-layout by default when opening or creating a scenario](https://github.com/creately/creately-ai/pull/1622) | 🟡 Open | • Enable auto-layout by default when opening or creating a scenario | • Improved application reliability |
-| 20 April 2026 | [feat: implement Salesforce shape library with custom SVG rendering an…](https://github.com/creately/creately-ai/pull/1433) | 🟡 Open | • Implement Salesforce shape library with custom SVG rendering an… | • New capability for end users |
-| 5 January 2026 | [Dashboard Terminology and UX Clarity Improvements](https://github.com/creately/creately-ai/pull/611) | ✅ Merged | • Refined dashboard terminology for better user understanding | • Reduced user confusion by 35% |
-| 25 November 2025 | [Add custom SVG icon for ShapeSwitchTool toolbar button. ](https://github.com/creately/creately-ai/pull/500) | ✅ Merged | • Designed and integrated custom SVG icon | • Improved visual clarity of shape switching feature |
-| 24 November 2025 | [Quick Create Panel & relationship selection](https://github.com/creately/creately-ai/pull/496) | ✅ Merged | • Built Quick Create Panel component | • Reduced diagram creation time by 40% |
-| 24 November 2025 | [Relationship library](https://github.com/creately/creately-ai/pull/494) | ✅ Merged | • Created comprehensive relationship library | • Users can now access 100+ pre-built relationships |
-| 20 November 2025 | [Add genogram relationship icons and enhance UI components](https://github.com/creately/creately-ai/pull/476) | ❌ Closed | • Add genogram relationship icons and enhance UI components | • Improved reliability, performance, or user experience |
-| 20 November 2025 | [Updated relationship/style switcher icon in ConnectorToolbar from Square to Spline for improved visual clarity.](https://github.com/creately/creately-ai/pull/479) | ✅ Merged | • Replaced connector icon with improved Spline design | • Improved visual hierarchy in toolbar |
-| 17 November 2025 | [Update icon size for 'Start with Blank Canvas' use case in genogram c…](https://github.com/creately/creately-ai/pull/456) | ✅ Merged | • Adjusted icon sizing for better visibility | • Better UX on mobile and desktop |
-| 13 November 2025 | [Added cursor pointer styling to Genogram Assistant Panel ](https://github.com/creately/creately-ai/pull/442) | ✅ Merged | • Added interactive cursor styling | • Better user guidance in genogram creation |
-| 13 November 2025 | [Dhanushka/issue 278](https://github.com/creately/creately-ai/pull/440) | ✅ Merged | • Update default legacy diagram icon to 'file' | • Improved reliability, performance, or UX (CHANGELOG.md) |
-| 13 November 2025 | [Updated blank diagram source type](https://github.com/creately/creately-ai/pull/438) | ✅ Merged | • Updated diagram source type handling | • Fixed blank diagram creation issues |
-| 11 November 2025 | [Diagram icon (thumbnail) changes ](https://github.com/creately/creately-ai/pull/418) | ✅ Merged | • Redesigned diagram thumbnails | • Better diagram identification |
-| 7 November 2025 | [Remove ItemMenuButton from DashboardPage component](https://github.com/creately/creately-ai/pull/393) | ✅ Merged | • Refactored DashboardPage component | • Simplified component structure |
-| 6 November 2025 | [ ScrollableText component with smooth scrolling animation](https://github.com/creately/creately-ai/pull/386) | ✅ Merged | • Created ScrollableText component | • Better text presentation for long content |
-| 6 November 2025 | [Dhanushka/qa issue - 170, 86](https://github.com/creately/creately-ai/pull/367) | ✅ Merged | • Update ShareDialog component to adjust SelectTrigger wi… | • Improved reliability, performance, or UX (components) |
-| 3 November 2025 | [# PR #166: Icon Colors and Z-Index Improvements](https://github.com/creately/creately-ai/pull/350) | ✅ Merged | • Updated icon color schemes for consistency | • Better visual consistency across UI |
-| 3 November 2025 | [Add user avatar and logout functionality to AppSidebar component](https://github.com/creately/creately-ai/pull/347) | ✅ Merged | • Added user avatar display | • Enhanced user profile visibility |
-| 3 November 2025 | [Dashboard UI Improvements](https://github.com/creately/creately-ai/pull/345) | ✅ Merged | • Redesigned dashboard layout | • Better user navigation |
-| 31 October 2025 | [Pen Tool Enhancement: Multi-mode Support with Dynamic Toolbar Icons](https://github.com/creately/creately-ai/pull/314) | ✅ Merged | • Added multi-mode support to Pen Tool | • Users can now switch pen modes seamlessly |
-| 31 October 2025 | [Fixes incorrect sticky note preview colors & Transgender shape detection in genograms](https://github.com/creately/creately-ai/pull/303) | ✅ Merged | • Fixed sticky note color display | • Fixed visual bugs in sticky notes |
-| 24 October 2025 | [Enhanced SVG rendering for genogram shapes in canvas previews](https://github.com/creately/creately-ai/pull/238) | ✅ Merged | • Improved SVG rendering performance | • Better visual quality of genogram previews |
-| 27 October 2025 | [Update primary color variables in CSS for consistent theming](https://github.com/creately/creately-ai/pull/245) | ✅ Merged | • Centralized color variable management | • Easier theme maintenance |
-| 24 October 2025 | [SVG Rendering for Genogram Shapes in OverlaysLayer](https://github.com/creately/creately-ai/pull/226) | ✅ Merged | • Implemented SVG rendering layer | • Better genogram shape rendering |
-| 21 October 2025 | [Sticky notes, Shapes bg fill qa issues fixed](https://github.com/creately/creately-ai/pull/203) | ❌ Closed | • Enhance sticky note tool and preview colors | • Improved reliability, performance, or user experience |
-| 17 October 2025 | [Fixed QA issues related sticky notes](https://github.com/creately/creately-ai/pull/194) | ❌ Closed | • Enhance StickyNoteNode: Implement dynamic font styling and improve re… | • Improved application reliability |
-| 14 October 2025 | [Update PersonNode component to utilize dynamic node colors](https://github.com/creately/creately-ai/pull/169) | ✅ Merged | • Added dynamic color support to PersonNode | • Users can customize node colors |
-| 13 October 2025 | [Genogram gender based shapes ](https://github.com/creately/creately-ai/pull/166) | ✅ Merged | • Implemented gender-based shape rendering | • Accurate genogram shape representation |
-| 6 October 2025 | [Update genogram shapes ](https://github.com/creately/creately-ai/pull/142) | ✅ Merged | • Redesigned genogram shapes | • Better shape aesthetics |
-| 29 September 2025 | [Refactor ShapePickerTool styles and layout for improved UI consistency](https://github.com/creately/creately-ai/pull/92) | ❌ Closed | • Refactor ShapePickerTool styles and layout for improved UI consistency | • Improved code maintainability |
-| 1 October 2025 | [Plus create pop up ui & ux fixed](https://github.com/creately/creately-ai/pull/129) | ✅ Merged | • Redesigned create popup UI | • Better create workflow |
-| 30 September 2025 | [Apply correct Iconography](https://github.com/creately/creately-ai/pull/114) | ✅ Merged | • Updated icon set for consistency | • Consistent iconography across app |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>15 June 2026</td><td>[feat: add source choice modal for Org…](https://github.com/creately/creately-ai/pull/1672)</td><td>🟡 Open</td><td>• Add source choice modal for Org Chart template</td><td>• New capability for end users</td></tr>
+<tr><td>15 June 2026</td><td>[Sign In Popup Close Button and Back B…](https://github.com/creately/creately-ai/pull/1678)</td><td>🟡 Open</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience• Improved reliability, performance, or user experience</td></tr>
+<tr><td>7 May 2026</td><td>[Sign In Popup Close Button and Back B…](https://github.com/creately/creately-ai/pull/1526)</td><td>❌ Closed</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience• Improved reliability, performance, or user experience</td></tr>
+<tr><td>2 June 2026</td><td>[[Creately AI]Update Free User and Dem…](https://github.com/creately/creately-ai/pull/1647)</td><td>🟡 Open</td><td>• Implement shape usage tracking and limits in the Entitlements system</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>26 May 2026</td><td>[fix: enable auto-layout by default wh…](https://github.com/creately/creately-ai/pull/1622)</td><td>🟡 Open</td><td>• Enable auto-layout by default when opening or creating a scenario</td><td>• Improved application reliability</td></tr>
+<tr><td>20 April 2026</td><td>[feat: implement Salesforce shape libr…](https://github.com/creately/creately-ai/pull/1433)</td><td>🟡 Open</td><td>• Implement Salesforce shape library with custom SVG rendering an…</td><td>• New capability for end users</td></tr>
+<tr><td>5 January 2026</td><td>[Dashboard Terminology and UX Clarity …](https://github.com/creately/creately-ai/pull/611)</td><td>✅ Merged</td><td>• Refined dashboard terminology for better user understanding</td><td>• Reduced user confusion by 35%</td></tr>
+<tr><td>25 November 2025</td><td>[Add custom SVG icon for ShapeSwitchTo…](https://github.com/creately/creately-ai/pull/500)</td><td>✅ Merged</td><td>• Designed and integrated custom SVG icon</td><td>• Improved visual clarity of shape switching feature</td></tr>
+<tr><td>24 November 2025</td><td>[Quick Create Panel & relationship sel…](https://github.com/creately/creately-ai/pull/496)</td><td>✅ Merged</td><td>• Built Quick Create Panel component</td><td>• Reduced diagram creation time by 40%</td></tr>
+<tr><td>24 November 2025</td><td>[Relationship library](https://github.com/creately/creately-ai/pull/494)</td><td>✅ Merged</td><td>• Created comprehensive relationship library</td><td>• Users can now access 100+ pre-built relationships</td></tr>
+<tr><td>20 November 2025</td><td>[Add genogram relationship icons and e…](https://github.com/creately/creately-ai/pull/476)</td><td>❌ Closed</td><td>• Add genogram relationship icons and enhance UI components</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>20 November 2025</td><td>[Updated relationship/style switcher i…](https://github.com/creately/creately-ai/pull/479)</td><td>✅ Merged</td><td>• Replaced connector icon with improved Spline design</td><td>• Improved visual hierarchy in toolbar</td></tr>
+<tr><td>17 November 2025</td><td>[Update icon size for 'Start with Blan…](https://github.com/creately/creately-ai/pull/456)</td><td>✅ Merged</td><td>• Adjusted icon sizing for better visibility</td><td>• Better UX on mobile and desktop</td></tr>
+<tr><td>13 November 2025</td><td>[Added cursor pointer styling to Genog…](https://github.com/creately/creately-ai/pull/442)</td><td>✅ Merged</td><td>• Added interactive cursor styling</td><td>• Better user guidance in genogram creation</td></tr>
+<tr><td>13 November 2025</td><td>[Dhanushka/issue 278](https://github.com/creately/creately-ai/pull/440)</td><td>✅ Merged</td><td>• Update default legacy diagram icon to 'file'</td><td>• Reliability & UX (CHANGELOG.md)</td></tr>
+<tr><td>13 November 2025</td><td>[Updated blank diagram source type](https://github.com/creately/creately-ai/pull/438)</td><td>✅ Merged</td><td>• Updated diagram source type handling</td><td>• Fixed blank diagram creation issues</td></tr>
+<tr><td>11 November 2025</td><td>[Diagram icon (thumbnail) changes ](https://github.com/creately/creately-ai/pull/418)</td><td>✅ Merged</td><td>• Redesigned diagram thumbnails</td><td>• Better diagram identification</td></tr>
+<tr><td>7 November 2025</td><td>[Remove ItemMenuButton from DashboardP…](https://github.com/creately/creately-ai/pull/393)</td><td>✅ Merged</td><td>• Refactored DashboardPage component</td><td>• Simplified component structure</td></tr>
+<tr><td>6 November 2025</td><td>[ ScrollableText component with smooth…](https://github.com/creately/creately-ai/pull/386)</td><td>✅ Merged</td><td>• Created ScrollableText component</td><td>• Better text presentation for long content</td></tr>
+<tr><td>6 November 2025</td><td>[Dhanushka/qa issue - 170, 86](https://github.com/creately/creately-ai/pull/367)</td><td>✅ Merged</td><td>• Update ShareDialog component to adjust Sel…</td><td>• Reliability & UX (components)</td></tr>
+<tr><td>3 November 2025</td><td>[# PR #166: Icon Colors and Z-Index Im…](https://github.com/creately/creately-ai/pull/350)</td><td>✅ Merged</td><td>• Updated icon color schemes for consistency</td><td>• Better visual consistency across UI</td></tr>
+<tr><td>3 November 2025</td><td>[Add user avatar and logout functional…](https://github.com/creately/creately-ai/pull/347)</td><td>✅ Merged</td><td>• Added user avatar display</td><td>• Enhanced user profile visibility</td></tr>
+<tr><td>3 November 2025</td><td>[Dashboard UI Improvements](https://github.com/creately/creately-ai/pull/345)</td><td>✅ Merged</td><td>• Redesigned dashboard layout</td><td>• Better user navigation</td></tr>
+<tr><td>31 October 2025</td><td>[Pen Tool Enhancement: Multi-mode Supp…](https://github.com/creately/creately-ai/pull/314)</td><td>✅ Merged</td><td>• Added multi-mode support to Pen Tool</td><td>• Users can now switch pen modes seamlessly</td></tr>
+<tr><td>31 October 2025</td><td>[Fixes incorrect sticky note preview c…](https://github.com/creately/creately-ai/pull/303)</td><td>✅ Merged</td><td>• Fixed sticky note color display</td><td>• Fixed visual bugs in sticky notes</td></tr>
+<tr><td>24 October 2025</td><td>[Enhanced SVG rendering for genogram s…](https://github.com/creately/creately-ai/pull/238)</td><td>✅ Merged</td><td>• Improved SVG rendering performance</td><td>• Better visual quality of genogram previews</td></tr>
+<tr><td>27 October 2025</td><td>[Update primary color variables in CSS…](https://github.com/creately/creately-ai/pull/245)</td><td>✅ Merged</td><td>• Centralized color variable management</td><td>• Easier theme maintenance</td></tr>
+<tr><td>24 October 2025</td><td>[SVG Rendering for Genogram Shapes in …](https://github.com/creately/creately-ai/pull/226)</td><td>✅ Merged</td><td>• Implemented SVG rendering layer</td><td>• Better genogram shape rendering</td></tr>
+<tr><td>21 October 2025</td><td>[Sticky notes, Shapes bg fill qa issue…](https://github.com/creately/creately-ai/pull/203)</td><td>❌ Closed</td><td>• Enhance sticky note tool and preview colors</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>17 October 2025</td><td>[Fixed QA issues related sticky notes](https://github.com/creately/creately-ai/pull/194)</td><td>❌ Closed</td><td>• Enhance StickyNoteNode: Implement dynamic font styling and improve re…</td><td>• Improved application reliability</td></tr>
+<tr><td>14 October 2025</td><td>[Update PersonNode component to utiliz…](https://github.com/creately/creately-ai/pull/169)</td><td>✅ Merged</td><td>• Added dynamic color support to PersonNode</td><td>• Users can customize node colors</td></tr>
+<tr><td>13 October 2025</td><td>[Genogram gender based shapes ](https://github.com/creately/creately-ai/pull/166)</td><td>✅ Merged</td><td>• Implemented gender-based shape rendering</td><td>• Accurate genogram shape representation</td></tr>
+<tr><td>6 October 2025</td><td>[Update genogram shapes ](https://github.com/creately/creately-ai/pull/142)</td><td>✅ Merged</td><td>• Redesigned genogram shapes</td><td>• Better shape aesthetics</td></tr>
+<tr><td>29 September 2025</td><td>[Refactor ShapePickerTool styles and l…](https://github.com/creately/creately-ai/pull/92)</td><td>❌ Closed</td><td>• Refactor ShapePickerTool styles and layout for improved UI consistency</td><td>• Improved code maintainability</td></tr>
+<tr><td>1 October 2025</td><td>[Plus create pop up ui & ux fixed](https://github.com/creately/creately-ai/pull/129)</td><td>✅ Merged</td><td>• Redesigned create popup UI</td><td>• Better create workflow</td></tr>
+<tr><td>30 September 2025</td><td>[Apply correct Iconography](https://github.com/creately/creately-ai/pull/114)</td><td>✅ Merged</td><td>• Updated icon set for consistency</td><td>• Consistent iconography across app</td></tr>
+</table>
 
 ---
 
 ### 📦 creately/creately-next
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 17 June 2026 | [feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting](https://github.com/creately/creately-next/pull/16422) | 🟡 Open | • Add excludeFromPlanCount flag to exclude shapes from plan limit… | • New capability for end users |
-| 21 May 2026 | [Add family tree library](https://github.com/creately/creately-next/pull/16406) | ✅ Merged | • Add Family Tree library to the shape library menu and localizat… | • Improved reliability, performance, or user experience |
-| 2 June 2026 | [[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/creately-next/pull/16414) | 🟡 Open | • Add total shape usage permission handling | • Improved reliability, performance, or user experience |
-| 20 April 2026 | [feat: add Salesforce library support and disable React dashboard in c…](https://github.com/creately/creately-next/pull/16388) | 🟡 Open | • Add Salesforce library support and disable React dashboard in c… | • New capability for end users |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>17 June 2026</td><td>[feat: add excludeFromPlanCount shape …](https://github.com/creately/creately-next/pull/16422)</td><td>🟡 Open</td><td>• Add excludeFromPlanCount flag to exclude shapes from plan limit…</td><td>• New capability for end users</td></tr>
+<tr><td>21 May 2026</td><td>[Add family tree library](https://github.com/creately/creately-next/pull/16406)</td><td>✅ Merged</td><td>• Add Family Tree library to the shape library menu and localizat…</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>2 June 2026</td><td>[[Creately Worksapces]Update Free User…](https://github.com/creately/creately-next/pull/16414)</td><td>🟡 Open</td><td>• Add total shape usage permission handling</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>20 April 2026</td><td>[feat: add Salesforce library support …](https://github.com/creately/creately-next/pull/16388)</td><td>🟡 Open</td><td>• Add Salesforce library support and disable React dashboard in c…</td><td>• New capability for end users</td></tr>
+</table>
 
 ---
 
 ### 📦 creately/diagram-community
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 10 June 2026 | [Revert PR #886 diagram example A/B test](https://github.com/creately/diagram-community/pull/952) | ✅ Merged | • Revert PR #886 diagram example A/B test | • Improved reliability, performance, or user experience |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>10 June 2026</td><td>[Revert PR #886 diagram example A/B test](https://github.com/creately/diagram-community/pull/952)</td><td>✅ Merged</td><td>• Revert PR #886 diagram example A/B test</td><td>• Improved reliability, performance, or user experience</td></tr>
+</table>
 
 ---
 
 ### 📦 creately/general-shape-code
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 21 May 2026 | [Add family tree library](https://github.com/creately/general-shape-code/pull/1203) | ✅ Merged | • Add circle and square family tree shape definitions and logic | • Improved reliability, performance, or user experience |
-| 20 April 2026 | [feat: add comprehensive Salesforce shape library including cards, doc…](https://github.com/creately/general-shape-code/pull/1201) | 🟡 Open | • Add comprehensive Salesforce shape library including cards, doc… | • New capability for end users |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>21 May 2026</td><td>[Add family tree library](https://github.com/creately/general-shape-code/pull/1203)</td><td>✅ Merged</td><td>• Add circle and square family tree shape definitions and logic</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>20 April 2026</td><td>[feat: add comprehensive Salesforce sh…](https://github.com/creately/general-shape-code/pull/1201)</td><td>🟡 Open</td><td>• Add comprehensive Salesforce shape library including cards, doc…</td><td>• New capability for end users</td></tr>
+</table>
 
 ---
 
 ### 📦 creately/neutrino
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 2 June 2026 | [[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/neutrino/pull/760) | 🟡 Open | • Add shape permissions and counters for user diagrams | • Improved reliability, performance, or user experience |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>2 June 2026</td><td>[[Creately Worksapces]Update Free User…](https://github.com/creately/neutrino/pull/760)</td><td>🟡 Open</td><td>• Add shape permissions and counters for user diagrams</td><td>• Improved reliability, performance, or user experience</td></tr>
+</table>
 
 ---
 
 ### 📦 creately/phoenix
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 29 April 2026 | [Fix email confirmation layout (hide logo section) (#9788 #9789)](https://github.com/creately/phoenix/pull/9810) | ✅ Merged | • Add logo section and styles to email confirmation layout | • Improved application reliability |
-| 7 May 2026 | [Sign In Popup Close Button and Back Button Visibility Issues](https://github.com/creately/phoenix/pull/9872) | 🟡 Open | • Signup back arrow icon visibility issue | • Improved reliability, performance, or user experience |
-| 10 June 2026 | [Revert homepage hero GIF A/B test changes](https://github.com/creately/phoenix/pull/10169) | ✅ Merged | • Pr revert #9661 | • Improved reliability, performance, or user experience |
-| 11 June 2026 | [Exclude UK home hreflang alternate links](https://github.com/creately/phoenix/pull/10174) | ✅ Merged | • Exclude UK home hreflang alternate links | • Improved reliability, performance, or user experience |
-| 4 June 2026 | [[Phoenix] Update Free User and Demo User Shape Limit to 45 Per Account Across Apps](https://github.com/creately/phoenix/pull/10132) | 🟡 Open | • Refactor upgrade dialog messages to simplify text | • Improved reliability, performance, or user experience |
-| 29 May 2026 | [Update Log In translations and layout text](https://github.com/creately/phoenix/pull/10090) | ✅ Merged | • Update Log In translations and layout text | • Improved reliability, performance, or user experience |
-| 29 May 2026 | [fix: remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortcodes](https://github.com/creately/phoenix/pull/10086) | 🟡 Open | • Remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortc… | • Improved application reliability |
-| 20 May 2026 | [chore: update family genogram maker main button link with template ID](https://github.com/creately/phoenix/pull/9993) | ✅ Merged | • Update family genogram maker main button link with template ID | • Maintenance and dependency updates |
-| 18 May 2026 | [Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985) | ✅ Merged | • Content(landing): add starter template IDs to CTA buttons | • Improved reliability, performance, or user experience |
-| 9 April 2026 | [style: add object-fit: cover to landing-7 feature images](https://github.com/creately/phoenix/pull/9651) | 🟡 Open | • Add object-fit: cover to landing-7 feature images | • Improved reliability, performance, or user experience |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>29 April 2026</td><td>[Fix email confirmation layout (hide l…](https://github.com/creately/phoenix/pull/9810)</td><td>✅ Merged</td><td>• Add logo section and styles to email confirmation layout</td><td>• Improved application reliability</td></tr>
+<tr><td>7 May 2026</td><td>[Sign In Popup Close Button and Back B…](https://github.com/creately/phoenix/pull/9872)</td><td>🟡 Open</td><td>• Signup back arrow icon visibility issue</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>10 June 2026</td><td>[Revert homepage hero GIF A/B test cha…](https://github.com/creately/phoenix/pull/10169)</td><td>✅ Merged</td><td>• Pr revert #9661</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>11 June 2026</td><td>[Exclude UK home hreflang alternate links](https://github.com/creately/phoenix/pull/10174)</td><td>✅ Merged</td><td>• Exclude UK home hreflang alternate links</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>4 June 2026</td><td>[[Phoenix] Update Free User and Demo U…](https://github.com/creately/phoenix/pull/10132)</td><td>🟡 Open</td><td>• Refactor upgrade dialog messages to simplify text</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>29 May 2026</td><td>[Update Log In translations and layout…](https://github.com/creately/phoenix/pull/10090)</td><td>✅ Merged</td><td>• Update Log In translations and layout text</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>29 May 2026</td><td>[fix: remove PLANS_NEW_PURCHASE_ITEM_F…](https://github.com/creately/phoenix/pull/10086)</td><td>🟡 Open</td><td>• Remove PLANS_NEW_PURCHASE_ITEM_FREE_FEATURES_7 from plans shortc…</td><td>• Improved application reliability</td></tr>
+<tr><td>20 May 2026</td><td>[chore: update family genogram maker m…](https://github.com/creately/phoenix/pull/9993)</td><td>✅ Merged</td><td>• Update family genogram maker main button link with template ID</td><td>• Maintenance and dependency updates</td></tr>
+<tr><td>18 May 2026</td><td>[Add starter template IDs to CTA buttons](https://github.com/creately/phoenix/pull/9985)</td><td>✅ Merged</td><td>• Content(landing): add starter template IDs to CTA buttons</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>9 April 2026</td><td>[style: add object-fit: cover to landi…](https://github.com/creately/phoenix/pull/9651)</td><td>🟡 Open</td><td>• Add object-fit: cover to landing-7 feature images</td><td>• Improved reliability, performance, or user experience</td></tr>
+</table>
 
 ---
 
 ### 📦 creately/team-portal
 
-| Date | Contribution | Status | Implementation | Impact |
-| :--- | :--- | :--- | :--- | :--- |
-| 7 November 2025 | [Update favicon.ico](https://github.com/creately/team-portal/pull/391) | ✅ Merged | • Update favicon.ico | • Improved reliability, performance, or user experience |
+<table>
+<colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
+<tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>7 November 2025</td><td>[Update favicon.ico](https://github.com/creately/team-portal/pull/391)</td><td>✅ Merged</td><td>• Update favicon.ico</td><td>• Improved reliability, performance, or user experience</td></tr>
+</table>
 
 ---
 
