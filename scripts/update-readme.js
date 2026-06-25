@@ -91,6 +91,185 @@ function parseContributionsFile() {
   }
 }
 
+function fetchPrDetails(prUrl) {
+  try {
+    const output = execSync(
+      `gh pr view ${prUrl} --json title,body,labels,files,commits,state`,
+      { stdio: ["ignore", "pipe", "pipe"], timeout: 15000 }
+    ).toString();
+    return JSON.parse(output);
+  } catch {
+    return null;
+  }
+}
+
+function generateImplementationImpact(prDetails, prTitle) {
+  if (!prDetails) {
+    return {
+      implementation: ["Feature development or bug fix addressing specific use cases"],
+      impact: ["Improved reliability, performance, or user experience"],
+    };
+  }
+
+  const labels = prDetails.labels.map((l) => l.name.toLowerCase());
+  const files = prDetails.files.map((f) => f.path);
+  const commits = prDetails.commits || [];
+
+  const isFeature =
+    labels.some((l) => /^(feat|feature)$/.test(l)) || /^feat/i.test(prTitle);
+  const isFix =
+    labels.some((l) => /^(fix|bug)$/.test(l)) || /^fix/i.test(prTitle);
+  const isChore =
+    labels.some((l) => /^chore$/.test(l)) || /^chore/i.test(prTitle);
+  const isRefactor =
+    labels.some((l) => /^refactor$/.test(l)) || /^refactor/i.test(prTitle);
+
+  const areas = [
+    ...new Set(
+      files
+        .map((f) => {
+          const parts = f.split("/");
+          if (parts[0] === "src" && parts[1]) return parts[1];
+          if (
+            parts[0] !== "node_modules" &&
+            parts[0] !== ".github" &&
+            parts[0] !== ".yarn" &&
+            !parts[0].startsWith(".")
+          )
+            return parts[0];
+          return null;
+        })
+        .filter(Boolean)
+    ),
+  ].slice(0, 3);
+
+  const commitMsgs = commits
+    .map((c) => c.messageHeadline)
+    .filter(Boolean)
+    .slice(0, 3)
+    .map((msg) =>
+      msg.replace(
+        /^(feat|fix|chore|refactor|docs|style|test|perf|build|ci)(\(.*?\))?:\s*/i,
+        ""
+      )
+    )
+    .filter((msg) => msg.length > 5);
+
+  const implementation = [];
+  const impact = [];
+
+  if (commitMsgs.length > 0) {
+    commitMsgs.forEach((msg) =>
+      implementation.push(msg.charAt(0).toUpperCase() + msg.slice(1))
+    );
+  } else if (isFeature) {
+    implementation.push(
+      `Feature: ${prTitle.replace(/^feat(\(.*?\))?:\s*/i, "").trim()}`
+    );
+  } else if (isFix) {
+    implementation.push(
+      `Fix: ${prTitle.replace(/^fix(\(.*?\))?:\s*/i, "").trim()}`
+    );
+  } else {
+    implementation.push(prTitle);
+  }
+
+  if (areas.length > 0) {
+    implementation.push(`Modified ${areas.join(", ")}`);
+  }
+
+  if (isFeature) {
+    impact.push("New capability for end users");
+    impact.push("Enhanced product functionality");
+  } else if (isFix) {
+    impact.push("Improved application reliability");
+    impact.push("Better user experience");
+  } else if (isRefactor) {
+    impact.push("Improved code maintainability");
+    impact.push("Reduced technical debt");
+  } else if (isChore) {
+    impact.push("Maintenance and dependency updates");
+    impact.push("Improved developer productivity");
+  } else {
+    impact.push("Improved reliability, performance, or user experience");
+  }
+
+  if (areas.length > 0) {
+    const area =
+      areas.length === 1
+        ? areas[0]
+        : areas.slice(0, -1).join(", ") + " and " + areas[areas.length - 1];
+    impact.push(`Changes across ${area}`);
+  }
+
+  return { implementation, impact };
+}
+
+function formatContributionEntry(title, prUrl, date, status, implementation, impact) {
+  let entry = `### ${title}\n`;
+  entry += `- **PR:** ${prUrl}\n`;
+  entry += `- **Date:** ${date}\n`;
+  entry += `- **Status:** ${status}\n`;
+  entry += `- **Implementation:**\n`;
+  implementation.forEach((i) => (entry += `  - ${i}\n`));
+  entry += `- **Impact:**\n`;
+  impact.forEach((i) => (entry += `  - ${i}\n`));
+  return entry;
+}
+
+function ensureContributionInFile(
+  repoName,
+  title,
+  prUrl,
+  date,
+  status,
+  implementation,
+  impact
+) {
+  if (!fs.existsSync(CONTRIBUTIONS_PATH)) {
+    let content = `# Contributions & Impact Registry\n\nThis file tracks implementation details and impact of all PRs. Updated automatically in README.md daily.\n\n## ${repoName}\n\n`;
+    content += formatContributionEntry(
+      title,
+      prUrl,
+      date,
+      status,
+      implementation,
+      impact
+    );
+    fs.writeFileSync(CONTRIBUTIONS_PATH, content, "utf8");
+    return;
+  }
+
+  let content = fs.readFileSync(CONTRIBUTIONS_PATH, "utf8");
+  if (content.includes(prUrl)) return;
+
+  const repoHeader = `## ${repoName}`;
+  const entry = formatContributionEntry(
+    title,
+    prUrl,
+    date,
+    status,
+    implementation,
+    impact
+  );
+
+  const repoIndex = content.indexOf(repoHeader);
+  if (repoIndex === -1) {
+    content += `\n${repoHeader}\n${entry}\n`;
+  } else {
+    const afterHeader = content.indexOf("\n", repoIndex) + 1;
+    const nextSection = content.indexOf("\n## ", afterHeader);
+    if (nextSection === -1) {
+      content = content.trimEnd() + "\n" + entry + "\n";
+    } else {
+      content =
+        content.slice(0, nextSection) + entry + "\n" + content.slice(nextSection);
+    }
+  }
+
+  fs.writeFileSync(CONTRIBUTIONS_PATH, content, "utf8");
+}
+
 function formatDate(dateString) {
   const date = new Date(dateString);
   if (isNaN(date.getTime())) return dateString;
@@ -201,8 +380,27 @@ ${emptyMessage}
       });
 
       if (!foundDetails) {
-        implementation = `• Feature development or bug fix addressing specific use cases`;
-        impact = `• Improved reliability, performance, or user experience`;
+        const prDetails = fetchPrDetails(pr.url);
+        const generated = generateImplementationImpact(prDetails, pr.title);
+
+        const implItems = generated.implementation;
+        const impactItems = generated.impact;
+        implementation = implItems.map((i) => `• ${i}<br>`).join("");
+        impact = impactItems.map((i) => `• ${i}<br>`).join("");
+
+        try {
+          ensureContributionInFile(
+            extractRepoName(pr.repository.nameWithOwner),
+            pr.title,
+            pr.url,
+            formatDate(pr.createdAt),
+            getStatusIndicator(pr),
+            implItems,
+            impactItems
+          );
+        } catch (err) {
+          console.warn(`Warning: Could not persist entry for "${pr.title}": ${err.message}`);
+        }
       }
 
       // Clean up trailing <br>
