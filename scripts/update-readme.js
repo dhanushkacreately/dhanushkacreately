@@ -160,7 +160,7 @@ function generateImplementationImpact(prDetails, prTitle) {
 }
 
 function formatContributionEntry(title, prUrl, date, status, implementation, impact) {
-  let entry = `### ${title}\n`;
+  let entry = `\n### ${title}\n`;
   entry += `- **PR:** ${prUrl}\n`;
   entry += `- **Date:** ${date}\n`;
   entry += `- **Status:** ${status}\n`;
@@ -303,7 +303,7 @@ ${emptyMessage}
       const date = pr.createdAt;
       const month = formatDate(date);
       const status = getStatusIndicator(pr);
-      const prLink = `[${pr.title} - ${pr.number}](${pr.url})`;
+      const prLink = `<a href="${pr.url}">${pr.title} - ${pr.number}</a>`;
 
       // Try to find matching contribution details
       let implementation = "";
@@ -313,15 +313,15 @@ ${emptyMessage}
         if (contribRepo.includes(repo.split("/")[1])) {
           contribList.forEach((contrib) => {
             if (
-              contrib.title.toLowerCase().includes(pr.title.toLowerCase()) ||
-              pr.title.toLowerCase().includes(contrib.title.toLowerCase())
+              pr.url.includes(contrib.pr) ||
+              contrib.pr.includes(pr.url)
             ) {
               if (contrib.implementation.length > 0) {
-                implementation += `• ${contrib.implementation[0]}`;
+                implementation = `• ${contrib.implementation[0]}`;
               }
 
               if (contrib.impact.length > 0) {
-                impact += `• ${contrib.impact[0]}`;
+                impact = `• ${contrib.impact[0]}`;
               }
 
               foundDetails = true;
