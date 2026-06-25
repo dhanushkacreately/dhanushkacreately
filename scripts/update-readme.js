@@ -17,7 +17,7 @@ function formatCommandFailure(error, context) {
 function getAllRecentPrs() {
   try {
     const output = execSync(
-      `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
+      `gh search prs --owner creately --author ${USER} --limit 1000 --sort updated --order desc --json title,url,number,state,closedAt,createdAt,repository,updatedAt`,
       { stdio: ["ignore", "pipe", "pipe"] }
     ).toString();
 
@@ -303,7 +303,7 @@ ${emptyMessage}
       const date = pr.createdAt;
       const month = formatDate(date);
       const status = getStatusIndicator(pr);
-      const prLink = `[${pr.title}](${pr.url})`;
+      const prLink = `[${pr.title} - ${pr.number}](${pr.url})`;
 
       // Try to find matching contribution details
       let implementation = "";
