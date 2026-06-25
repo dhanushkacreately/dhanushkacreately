@@ -103,11 +103,15 @@ function fetchPrDetails(prUrl) {
   }
 }
 
+function truncate(str, maxLen = 55) {
+  return str.length > maxLen ? str.slice(0, maxLen) + "…" : str;
+}
+
 function generateImplementationImpact(prDetails, prTitle) {
   if (!prDetails) {
     return {
-      implementation: ["Feature development or bug fix addressing specific use cases"],
-      impact: ["Improved reliability, performance, or user experience"],
+      implementation: "Feature development or bug fix",
+      impact: "Improved reliability, performance, or UX",
     };
   }
 
@@ -141,12 +145,11 @@ function generateImplementationImpact(prDetails, prTitle) {
         })
         .filter(Boolean)
     ),
-  ].slice(0, 3);
+  ].slice(0, 1);
 
   const commitMsgs = commits
     .map((c) => c.messageHeadline)
     .filter(Boolean)
-    .slice(0, 3)
     .map((msg) =>
       msg.replace(
         /^(feat|fix|chore|refactor|docs|style|test|perf|build|ci)(\(.*?\))?:\s*/i,
@@ -155,51 +158,39 @@ function generateImplementationImpact(prDetails, prTitle) {
     )
     .filter((msg) => msg.length > 5);
 
-  const implementation = [];
-  const impact = [];
+  let implementation;
+  let impact;
 
   if (commitMsgs.length > 0) {
-    commitMsgs.forEach((msg) =>
-      implementation.push(msg.charAt(0).toUpperCase() + msg.slice(1))
+    implementation = truncate(
+      commitMsgs[0].charAt(0).toUpperCase() + commitMsgs[0].slice(1)
     );
   } else if (isFeature) {
-    implementation.push(
-      `Feature: ${prTitle.replace(/^feat(\(.*?\))?:\s*/i, "").trim()}`
+    implementation = truncate(
+      prTitle.replace(/^feat(\(.*?\))?:\s*/i, "").trim()
     );
   } else if (isFix) {
-    implementation.push(
-      `Fix: ${prTitle.replace(/^fix(\(.*?\))?:\s*/i, "").trim()}`
+    implementation = truncate(
+      prTitle.replace(/^fix(\(.*?\))?:\s*/i, "").trim()
     );
   } else {
-    implementation.push(prTitle);
-  }
-
-  if (areas.length > 0) {
-    implementation.push(`Modified ${areas.join(", ")}`);
+    implementation = truncate(prTitle);
   }
 
   if (isFeature) {
-    impact.push("New capability for end users");
-    impact.push("Enhanced product functionality");
+    impact = "New capability for end users";
   } else if (isFix) {
-    impact.push("Improved application reliability");
-    impact.push("Better user experience");
+    impact = "Improved application reliability";
   } else if (isRefactor) {
-    impact.push("Improved code maintainability");
-    impact.push("Reduced technical debt");
+    impact = "Improved code maintainability";
   } else if (isChore) {
-    impact.push("Maintenance and dependency updates");
-    impact.push("Improved developer productivity");
+    impact = "Maintenance and dependency updates";
   } else {
-    impact.push("Improved reliability, performance, or user experience");
+    impact = "Improved reliability, performance, or UX";
   }
 
   if (areas.length > 0) {
-    const area =
-      areas.length === 1
-        ? areas[0]
-        : areas.slice(0, -1).join(", ") + " and " + areas[areas.length - 1];
-    impact.push(`Changes across ${area}`);
+    impact += ` (${areas[0]})`;
   }
 
   return { implementation, impact };
@@ -362,15 +353,11 @@ ${emptyMessage}
               pr.title.toLowerCase().includes(contrib.title.toLowerCase())
             ) {
               if (contrib.implementation.length > 0) {
-                contrib.implementation.forEach((item) => {
-                  implementation += `• ${item}<br>`;
-                });
+                implementation += `• ${contrib.implementation[0]}`;
               }
 
               if (contrib.impact.length > 0) {
-                contrib.impact.forEach((item) => {
-                  impact += `• ${item}<br>`;
-                });
+                impact += `• ${contrib.impact[0]}`;
               }
 
               foundDetails = true;
@@ -383,10 +370,8 @@ ${emptyMessage}
         const prDetails = fetchPrDetails(pr.url);
         const generated = generateImplementationImpact(prDetails, pr.title);
 
-        const implItems = generated.implementation;
-        const impactItems = generated.impact;
-        implementation = implItems.map((i) => `• ${i}<br>`).join("");
-        impact = impactItems.map((i) => `• ${i}<br>`).join("");
+        implementation = `• ${generated.implementation}`;
+        impact = `• ${generated.impact}`;
 
         try {
           ensureContributionInFile(
@@ -395,17 +380,13 @@ ${emptyMessage}
             pr.url,
             formatDate(pr.createdAt),
             getStatusIndicator(pr),
-            implItems,
-            impactItems
+            [generated.implementation],
+            [generated.impact]
           );
         } catch (err) {
           console.warn(`Warning: Could not persist entry for "${pr.title}": ${err.message}`);
         }
       }
-
-      // Clean up trailing <br>
-      implementation = implementation.replace(/(<br>)+$/, "");
-      impact = impact.replace(/(<br>)+$/, "");
 
       markdown += `| ${month} | ${prLink} | ${status} | ${implementation} | ${impact} |\n`;
     });
