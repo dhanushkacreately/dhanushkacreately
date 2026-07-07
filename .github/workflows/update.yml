@@ -88,13 +88,14 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add README.md CONTRIBUTIONS.md
-          git diff --cached --quiet && exit 0
+          git diff --cached --quiet && echo "changes_made=false" >> "$GITHUB_OUTPUT" && exit 0
+          echo "changes_made=true" >> "$GITHUB_OUTPUT"
           git commit -m "chore: update profile contributions"
           git push 2>&1 | tee commit.log
 
       - name: Build email content
         id: email_content
-        if: always()
+        if: always() && (steps.install_gh.outcome == 'failure' || steps.configure_gh.outcome == 'failure' || steps.update_contributions.outcome == 'failure' || steps.commit_changes.outcome == 'failure' || steps.commit_changes.outputs.changes_made == 'true')
         run: |
           STATUS="success"
           REASON="README update completed successfully."
@@ -148,7 +149,7 @@ jobs:
       # 8. Send email (SMTP)
       # -----------------------
       - name: Send email notification
-        if: always()
+        if: always() && (steps.install_gh.outcome == 'failure' || steps.configure_gh.outcome == 'failure' || steps.update_contributions.outcome == 'failure' || steps.commit_changes.outcome == 'failure' || steps.commit_changes.outputs.changes_made == 'true')
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
