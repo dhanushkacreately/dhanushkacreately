@@ -463,6 +463,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Changes across tools
 
 
+### Fix connector route parity in SVG export
+- **PR:** https://github.com/creately/creately-ai/pull/1784
+- **Date:** 14 July 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Fix connector export routing parity
+- **Impact:**
+  - Reliability (docs)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422

@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>55</td><td>36</td><td>14</td><td>5</td></tr>
+<tr><td>56</td><td>36</td><td>15</td><td>5</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,6 +48,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>14 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1784">Fix connector route parity in SVG export - 1784</a></td><td>🟡 Open</td><td>• Fix connector export routing parity</td><td>• Reliability (docs)</td></tr>
 <tr><td>20 April 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1433">feat: implement Salesforce shape library with custom SVG rendering an… - 1433</a></td><td>🟡 Open</td><td>• Implement Salesforce shape library with custom SVG rendering an…</td><td>• New capability for end users</td></tr>
 <tr><td>26 May 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1622">fix: enable auto-layout by default when opening or creating a scenario - 1622</a></td><td>🟡 Open</td><td>• Enable auto-layout by default when opening or creating a scenario</td><td>• Improved application reliability</td></tr>
 <tr><td>15 June 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1678">Sign In Popup Close Button and Back Button Visibility Issues - 1678</a></td><td>🟡 Open</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience</td></tr>
