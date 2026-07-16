@@ -473,6 +473,26 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability (docs)
 
 
+### feat(dashboard): add inactive user archive warning banner and status …
+- **PR:** https://github.com/creately/creately-ai/pull/1801
+- **Date:** 16 July 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Add inactive user archive warning banner a…
+- **Impact:**
+  - New capability (docs)
+
+
+### feat(dashboard): show inactive user archive warning banner
+- **PR:** https://github.com/creately/creately-ai/pull/1800
+- **Date:** 16 July 2026
+- **Status:** ❌ Closed
+- **Implementation:**
+  - Add inactive user archive warning banner t…
+- **Impact:**
+  - New capability (docs)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
@@ -576,6 +596,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
 - **Impact:**
   - Improved reliability, performance, or user experience
   - Changes across resources and com
+
+
+### Dhanushka/inactive user archive banner
+- **PR:** https://github.com/creately/neutrino/pull/763
+- **Date:** 16 July 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Add GetInactiveUserArchiveStatus API endpoint
+- **Impact:**
+  - Reliability & UX (resources)
 
 
 ## creately/phoenix

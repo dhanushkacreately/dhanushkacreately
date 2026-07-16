@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>56</td><td>36</td><td>15</td><td>5</td></tr>
+<tr><td>59</td><td>36</td><td>17</td><td>6</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,6 +48,8 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1801">feat(dashboard): add inactive user archive warning banner and status … - 1801</a></td><td>🟡 Open</td><td>• Add inactive user archive warning banner a…</td><td>• New capability (docs)</td></tr>
+<tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1800">feat(dashboard): show inactive user archive warning banner - 1800</a></td><td>❌ Closed</td><td>• Add inactive user archive warning banner t…</td><td>• New capability (docs)</td></tr>
 <tr><td>14 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1784">Fix connector route parity in SVG export - 1784</a></td><td>🟡 Open</td><td>• Fix connector export routing parity</td><td>• Reliability (docs)</td></tr>
 <tr><td>20 April 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1433">feat: implement Salesforce shape library with custom SVG rendering an… - 1433</a></td><td>🟡 Open</td><td>• Implement Salesforce shape library with custom SVG rendering an…</td><td>• New capability for end users</td></tr>
 <tr><td>26 May 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1622">fix: enable auto-layout by default when opening or creating a scenario - 1622</a></td><td>🟡 Open</td><td>• Enable auto-layout by default when opening or creating a scenario</td><td>• Improved application reliability</td></tr>
@@ -128,6 +130,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>16 July 2026</td><td><a href="https://github.com/creately/neutrino/pull/763">Dhanushka/inactive user archive banner - 763</a></td><td>🟡 Open</td><td>• Add GetInactiveUserArchiveStatus API endpoint</td><td>• Reliability & UX (resources)</td></tr>
 <tr><td>2 June 2026</td><td><a href="https://github.com/creately/neutrino/pull/760">[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps - 760</a></td><td>🟡 Open</td><td>• Add shape permissions and counters for user diagrams</td><td>• Improved reliability, performance, or user experience</td></tr>
 </table>
 
