@@ -130,7 +130,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
-<tr><td>16 July 2026</td><td><a href="https://github.com/creately/neutrino/pull/763">feat(user): add GetInactiveUserArchiveStatus REST command - 763</a></td><td>🟡 Open</td><td>• Add GetInactiveUserArchiveStatus API endpoint</td><td>• Reliability & UX (resources)</td></tr>
+<tr><td>16 July 2026</td><td><a href="https://github.com/creately/neutrino/pull/763">feat(user): add inactive user archive status REST command - 763</a></td><td>🟡 Open</td><td>• Add GetInactiveUserArchiveStatus API endpoint</td><td>• Reliability & UX (resources)</td></tr>
 <tr><td>2 June 2026</td><td><a href="https://github.com/creately/neutrino/pull/760">[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps - 760</a></td><td>🟡 Open</td><td>• Add shape permissions and counters for user diagrams</td><td>• Improved reliability, performance, or user experience</td></tr>
 </table>
 
