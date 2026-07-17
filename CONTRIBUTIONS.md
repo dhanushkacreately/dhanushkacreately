@@ -721,6 +721,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Changes across site
 
 
+### Move the three guide CTAs below the H1 (#10362)
+- **PR:** https://github.com/creately/phoenix/pull/10367
+- **Date:** 17 July 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Move CTAs below H1 on all guide pages with…
+- **Impact:**
+  - Reliability & UX (site)
+
+
 ## creately/team-portal
 ### Update favicon.ico
 - **PR:** https://github.com/creately/team-portal/pull/391

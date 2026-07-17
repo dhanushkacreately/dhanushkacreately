@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>59</td><td>36</td><td>17</td><td>6</td></tr>
+<tr><td>60</td><td>36</td><td>18</td><td>6</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -141,6 +141,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>17 July 2026</td><td><a href="https://github.com/creately/phoenix/pull/10367">Move the three guide CTAs below the H1 (#10362) - 10367</a></td><td>🟡 Open</td><td>• Move CTAs below H1 on all guide pages with…</td><td>• Reliability & UX (site)</td></tr>
 <tr><td>29 April 2026</td><td><a href="https://github.com/creately/phoenix/pull/9810">Fix email confirmation layout (hide logo section) (#9788 #9789) - 9810</a></td><td>✅ Merged</td><td>• Add logo section and styles to email confirmation layout</td><td>• Improved application reliability</td></tr>
 <tr><td>7 May 2026</td><td><a href="https://github.com/creately/phoenix/pull/9872">Sign In Popup Close Button and Back Button Visibility Issues - 9872</a></td><td>🟡 Open</td><td>• Signup back arrow icon visibility issue</td><td>• Improved reliability, performance, or user experience</td></tr>
 <tr><td>10 June 2026</td><td><a href="https://github.com/creately/phoenix/pull/10169">Revert homepage hero GIF A/B test changes - 10169</a></td><td>✅ Merged</td><td>• Pr revert #9661</td><td>• Improved reliability, performance, or user experience</td></tr>
