@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>60</td><td>36</td><td>18</td><td>6</td></tr>
+<tr><td>61</td><td>36</td><td>19</td><td>6</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,6 +48,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>20 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1820">feat(dashboard): show inactivity archive warning banner with support link - 1820</a></td><td>🟡 Open</td><td>• Add inactive user archive warning banner w…</td><td>• New capability (docs)</td></tr>
 <tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1801">feat(dashboard): add inactive user archive warning banner - 1801</a></td><td>🟡 Open</td><td>• Add inactive user archive warning banner a…</td><td>• New capability (docs)</td></tr>
 <tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1800">feat(dashboard): show inactive user archive warning banner - 1800</a></td><td>❌ Closed</td><td>• Add inactive user archive warning banner t…</td><td>• New capability (docs)</td></tr>
 <tr><td>14 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1784">Fix connector route parity in SVG export - 1784</a></td><td>🟡 Open</td><td>• Fix connector export routing parity</td><td>• Reliability (docs)</td></tr>

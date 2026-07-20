@@ -493,6 +493,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - New capability (docs)
 
 
+### feat(dashboard): show inactivity archive warning banner with support link
+- **PR:** https://github.com/creately/creately-ai/pull/1820
+- **Date:** 20 July 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Add inactive user archive warning banner w…
+- **Impact:**
+  - New capability (docs)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
