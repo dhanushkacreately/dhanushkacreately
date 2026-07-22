@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>61</td><td>36</td><td>19</td><td>6</td></tr>
+<tr><td>62</td><td>38</td><td>18</td><td>6</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,9 +48,10 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
-<tr><td>15 June 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1678">Sign In Popup Close Button and Back Button Visibility Issues - 1678</a></td><td>🟡 Open</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>22 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1828">Remove sign-in back button from OnboardingDialog - 1828</a></td><td>✅ Merged</td><td>• Remove sign-in back button from Onboarding…</td><td>• Reliability & UX (components)</td></tr>
 <tr><td>20 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1820">feat(dashboard): show inactivity archive warning banner with support link - 1820</a></td><td>🟡 Open</td><td>• Add inactive user archive warning banner w…</td><td>• New capability (docs)</td></tr>
 <tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1801">feat(dashboard): add inactive user archive warning banner - 1801</a></td><td>🟡 Open</td><td>• Add inactive user archive warning banner a…</td><td>• New capability (docs)</td></tr>
+<tr><td>15 June 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1678">Sign In Popup Close Button and Back Button Visibility Issues - 1678</a></td><td>🟡 Open</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience</td></tr>
 <tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1800">feat(dashboard): show inactive user archive warning banner - 1800</a></td><td>❌ Closed</td><td>• Add inactive user archive warning banner t…</td><td>• New capability (docs)</td></tr>
 <tr><td>14 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1784">Fix connector route parity in SVG export - 1784</a></td><td>🟡 Open</td><td>• Fix connector export routing parity</td><td>• Reliability (docs)</td></tr>
 <tr><td>20 April 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1433">feat: implement Salesforce shape library with custom SVG rendering an… - 1433</a></td><td>🟡 Open</td><td>• Implement Salesforce shape library with custom SVG rendering an…</td><td>• New capability for end users</td></tr>
@@ -142,9 +143,9 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
-<tr><td>17 July 2026</td><td><a href="https://github.com/creately/phoenix/pull/10367">Move the three guide CTAs below the H1 (#10362) - 10367</a></td><td>🟡 Open</td><td>• Move CTAs below H1 on all guide pages with…</td><td>• Reliability & UX (site)</td></tr>
-<tr><td>29 April 2026</td><td><a href="https://github.com/creately/phoenix/pull/9810">Fix email confirmation layout (hide logo section) (#9788 #9789) - 9810</a></td><td>✅ Merged</td><td>• Add logo section and styles to email confirmation layout</td><td>• Improved application reliability</td></tr>
+<tr><td>17 July 2026</td><td><a href="https://github.com/creately/phoenix/pull/10367">Move the three guide CTAs below the H1 (#10362) - 10367</a></td><td>✅ Merged</td><td>• Move CTAs below H1 on all guide pages with…</td><td>• Reliability & UX (site)</td></tr>
 <tr><td>7 May 2026</td><td><a href="https://github.com/creately/phoenix/pull/9872">Sign In Popup Close Button and Back Button Visibility Issues - 9872</a></td><td>🟡 Open</td><td>• Signup back arrow icon visibility issue</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>29 April 2026</td><td><a href="https://github.com/creately/phoenix/pull/9810">Fix email confirmation layout (hide logo section) (#9788 #9789) - 9810</a></td><td>✅ Merged</td><td>• Add logo section and styles to email confirmation layout</td><td>• Improved application reliability</td></tr>
 <tr><td>10 June 2026</td><td><a href="https://github.com/creately/phoenix/pull/10169">Revert homepage hero GIF A/B test changes - 10169</a></td><td>✅ Merged</td><td>• Pr revert #9661</td><td>• Improved reliability, performance, or user experience</td></tr>
 <tr><td>11 June 2026</td><td><a href="https://github.com/creately/phoenix/pull/10174">Exclude UK home hreflang alternate links - 10174</a></td><td>✅ Merged</td><td>• Exclude UK home hreflang alternate links</td><td>• Improved reliability, performance, or user experience</td></tr>
 <tr><td>4 June 2026</td><td><a href="https://github.com/creately/phoenix/pull/10132">[Phoenix] Update Free User and Demo User Shape Limit to 45 Per Account Across Apps - 10132</a></td><td>🟡 Open</td><td>• Refactor upgrade dialog messages to simplify text</td><td>• Improved reliability, performance, or user experience</td></tr>

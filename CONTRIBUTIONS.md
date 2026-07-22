@@ -503,6 +503,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - New capability (docs)
 
 
+### Remove sign-in back button from OnboardingDialog
+- **PR:** https://github.com/creately/creately-ai/pull/1828
+- **Date:** 22 July 2026
+- **Status:** ✅ Merged
+- **Implementation:**
+  - Remove sign-in back button from Onboarding…
+- **Impact:**
+  - Reliability & UX (components)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
