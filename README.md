@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>62</td><td>40</td><td>16</td><td>6</td></tr>
+<tr><td>62</td><td>41</td><td>15</td><td>6</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -132,7 +132,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
-<tr><td>16 July 2026</td><td><a href="https://github.com/creately/neutrino/pull/763">feat(user): add inactive user archive status REST command - 763</a></td><td>🟡 Open</td><td>• Add GetInactiveUserArchiveStatus API endpoint</td><td>• Reliability & UX (resources)</td></tr>
+<tr><td>16 July 2026</td><td><a href="https://github.com/creately/neutrino/pull/763">feat(user): add inactive user archive status REST command - 763</a></td><td>✅ Merged</td><td>• Add GetInactiveUserArchiveStatus API endpoint</td><td>• Reliability & UX (resources)</td></tr>
 <tr><td>2 June 2026</td><td><a href="https://github.com/creately/neutrino/pull/760">[Creately Worksapces]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps - 760</a></td><td>🟡 Open</td><td>• Add shape permissions and counters for user diagrams</td><td>• Improved reliability, performance, or user experience</td></tr>
 </table>
 
