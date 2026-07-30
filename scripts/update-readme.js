@@ -6,6 +6,19 @@ const USER = "dhanushkacreately";
 const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
+function getTotalCommits() {
+  try {
+    const output = execSync(
+      `gh search commits --owner creately --author ${USER} --limit 1000 --json oid`,
+      { stdio: ["ignore", "pipe", "pipe"] }
+    ).toString();
+    return JSON.parse(output).length;
+  } catch (error) {
+    console.warn("Warning: Could not fetch commit count:", error.message);
+    return 0;
+  }
+}
+
 function formatCommandFailure(error, context) {
   const stderr = error.stderr ? error.stderr.toString().trim() : "";
   const stdout = error.stdout ? error.stdout.toString().trim() : "";
@@ -281,11 +294,12 @@ ${emptyMessage}
     total: prs.length,
     merged: prs.filter(pr => pr.state.toUpperCase() === "MERGED").length,
     open: prs.filter(pr => pr.state.toUpperCase() === "OPEN").length,
-    closed: prs.filter(pr => pr.state.toUpperCase() === "CLOSED").length
+    closed: prs.filter(pr => pr.state.toUpperCase() === "CLOSED").length,
+    commits: getTotalCommits()
   };
 
-  markdown += `<table>\n<tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>\n`;
-  markdown += `<tr><td>${metrics.total}</td><td>${metrics.merged}</td><td>${metrics.open}</td><td>${metrics.closed}</td></tr>\n`;
+  markdown += `<table>\n<tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th><th>💻 Total Commits</th></tr>\n`;
+  markdown += `<tr><td>${metrics.total}</td><td>${metrics.merged}</td><td>${metrics.open}</td><td>${metrics.closed}</td><td>${metrics.commits}</td></tr>\n`;
   markdown += `</table>\n\n`;
 
   const sortedRepos = Object.keys(groupedByRepo).sort();
