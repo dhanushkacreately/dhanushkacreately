@@ -9,7 +9,7 @@ const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 function getTotalCommits() {
   try {
     const output = execSync(
-      `gh search commits --owner creately --author ${USER} --limit 1000 --json oid`,
+      `gh search commits org:creately author:${USER} --limit 1000 --json oid`,
       { stdio: ["ignore", "pipe", "pipe"] }
     ).toString();
     return JSON.parse(output).length;
