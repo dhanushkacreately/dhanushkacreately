@@ -39,8 +39,8 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 
 <!-- AUTO-GENERATED SECTION START -->
 <table>
-<tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th></tr>
-<tr><td>62</td><td>41</td><td>15</td><td>6</td></tr>
+<tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th><th>💻 Total Commits</th></tr>
+<tr><td>62</td><td>41</td><td>15</td><td>6</td><td>0</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
