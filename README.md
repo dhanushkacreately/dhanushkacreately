@@ -48,7 +48,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
-<tr><td>18 August 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1945">test: expand E2E coverage for ga active in_progress use cases - 1945</a></td><td>🟡 Open</td><td>• Enhance StickyNoteNode: Implement dynamic font styling and improve re…</td><td>• Improved application reliability</td></tr>
+<tr><td>18 August 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1945">test: expand E2E coverage for ga active in_progress use cases and 69 capabilities - 1945</a></td><td>🟡 Open</td><td>• Enhance StickyNoteNode: Implement dynamic font styling and improve re…</td><td>• Improved application reliability</td></tr>
 <tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1801">feat(dashboard): add inactive user archive warning banner - 1801</a></td><td>✅ Merged</td><td>• Add inactive user archive warning banner a…</td><td>• New capability (docs)</td></tr>
 <tr><td>20 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1820">feat(dashboard): show inactivity archive warning banner with support link - 1820</a></td><td>✅ Merged</td><td>• Add inactive user archive warning banner w…</td><td>• New capability (docs)</td></tr>
 <tr><td>22 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1828">Remove sign-in back button from OnboardingDialog - 1828</a></td><td>✅ Merged</td><td>• Remove sign-in back button from Onboarding…</td><td>• Reliability & UX (components)</td></tr>
