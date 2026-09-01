@@ -513,6 +513,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability & UX (components)
 
 
+### A/B test monthly vs annual plan visibility for genogram purchase flow
+- **PR:** https://github.com/creately/creately-ai/pull/2041
+- **Date:** 1 September 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Add genogram plan flag to upgrade dialog U…
+- **Impact:**
+  - Reliability & UX (components)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
