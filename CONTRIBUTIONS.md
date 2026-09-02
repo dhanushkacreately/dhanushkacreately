@@ -523,6 +523,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability & UX (components)
 
 
+### fix(upgrade): tag all upgrade popups with ?type=<diagramType>
+- **PR:** https://github.com/creately/creately-ai/pull/2048
+- **Date:** 2 September 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Tag all upgrade popups with ?type=<diagram…
+- **Impact:**
+  - Reliability (components)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
