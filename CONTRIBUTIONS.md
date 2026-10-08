@@ -533,6 +533,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability (components)
 
 
+### feat(skills): add PR E2E workflow
+- **PR:** https://github.com/creately/creately-ai/pull/2238
+- **Date:** 8 October 2026
+- **Status:** ✅ Merged
+- **Implementation:**
+  - Add PR E2E workflow
+- **Impact:**
+  - New capability (AGENTS.md)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
