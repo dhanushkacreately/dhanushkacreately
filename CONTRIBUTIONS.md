@@ -543,6 +543,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - New capability (AGENTS.md)
 
 
+### test(e2e): enforce a single global 30s timeout via E2E_TIMEOUT_MS
+- **PR:** https://github.com/creately/creately-ai/pull/2250
+- **Date:** 14 October 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Enforce a single global 30s timeout via E2…
+- **Impact:**
+  - Reliability & UX (docs)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422

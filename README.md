@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th><th>💻 Total Commits</th></tr>
-<tr><td>66</td><td>45</td><td>15</td><td>6</td><td>237</td></tr>
+<tr><td>67</td><td>45</td><td>16</td><td>6</td><td>237</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,6 +48,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>14 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2250">test(e2e): enforce a single global 30s timeout via E2E_TIMEOUT_MS - 2250</a></td><td>🟡 Open</td><td>• Enforce a single global 30s timeout via E2…</td><td>• Reliability & UX (docs)</td></tr>
 <tr><td>8 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2238">feat(skills): add PR E2E workflow - 2238</a></td><td>✅ Merged</td><td>• Add PR E2E workflow</td><td>• New capability (AGENTS.md)</td></tr>
 <tr><td>18 August 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1945">test: expand E2E coverage for ga active in_progress use cases and 69 capabilities - 1945</a></td><td>✅ Merged</td><td>• Enhance StickyNoteNode: Implement dynamic font styling and improve re…</td><td>• Improved application reliability</td></tr>
 <tr><td>2 September 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2048">fix(upgrade): tag all upgrade popups with ?type=<diagramType> - 2048</a></td><td>✅ Merged</td><td>• Tag all upgrade popups with ?type=<diagram…</td><td>• Reliability (components)</td></tr>
@@ -58,9 +59,9 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <tr><td>15 June 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1678">Sign In Popup Close Button and Back Button Visibility Issues - 1678</a></td><td>🟡 Open</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience</td></tr>
 <tr><td>16 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1800">feat(dashboard): show inactive user archive warning banner - 1800</a></td><td>❌ Closed</td><td>• Add inactive user archive warning banner t…</td><td>• New capability (docs)</td></tr>
 <tr><td>14 July 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1784">Fix connector route parity in SVG export - 1784</a></td><td>🟡 Open</td><td>• Fix connector export routing parity</td><td>• Reliability (docs)</td></tr>
-<tr><td>20 April 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1433">feat: implement Salesforce shape library with custom SVG rendering an… - 1433</a></td><td>🟡 Open</td><td>• Implement Salesforce shape library with custom SVG rendering an…</td><td>• New capability for end users</td></tr>
 <tr><td>26 May 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1622">fix: enable auto-layout by default when opening or creating a scenario - 1622</a></td><td>🟡 Open</td><td>• Enable auto-layout by default when opening or creating a scenario</td><td>• Improved application reliability</td></tr>
 <tr><td>2 June 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1647">[Creately AI]Update Free User and Demo User Shape Limit to 45 Per Account Across Apps   - 1647</a></td><td>🟡 Open</td><td>• Implement shape usage tracking and limits in the Entitlements system</td><td>• Improved reliability, performance, or user experience</td></tr>
+<tr><td>20 April 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1433">feat: implement Salesforce shape library with custom SVG rendering an… - 1433</a></td><td>🟡 Open</td><td>• Implement Salesforce shape library with custom SVG rendering an…</td><td>• New capability for end users</td></tr>
 <tr><td>15 June 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1672">feat: add source choice modal for Org Chart template - 1672</a></td><td>🟡 Open</td><td>• Add source choice modal for Org Chart template</td><td>• New capability for end users</td></tr>
 <tr><td>7 May 2026</td><td><a href="https://github.com/creately/creately-ai/pull/1526">Sign In Popup Close Button and Back Button Visibility Issues - 1526</a></td><td>❌ Closed</td><td>• Update OnboardingDialog to show close button based on SignUp page ins…</td><td>• Improved reliability, performance, or user experience</td></tr>
 <tr><td>5 January 2026</td><td><a href="https://github.com/creately/creately-ai/pull/611">Dashboard Terminology and UX Clarity Improvements - 611</a></td><td>✅ Merged</td><td>• Refined dashboard terminology for better user understanding</td><td>• Reduced user confusion by 35%</td></tr>
