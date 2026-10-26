@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th><th>💻 Total Commits</th></tr>
-<tr><td>68</td><td>47</td><td>15</td><td>6</td><td>241</td></tr>
+<tr><td>69</td><td>48</td><td>15</td><td>6</td><td>243</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,6 +48,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>26 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2292">test(orgchart): stabilize stateful E2E workflows - 2292</a></td><td>✅ Merged</td><td>• Stabilize stateful e2e workflows</td><td>• Reliability & UX (tests)</td></tr>
 <tr><td>19 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2267">test(e2e): harden editor specs — persistence flows, timeouts, and selector resilience - 2267</a></td><td>✅ Merged</td><td>• Implemented SVG rendering layer</td><td>• Better genogram shape rendering</td></tr>
 <tr><td>14 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2250">test(e2e): enforce a single global 30s timeout via E2E_TIMEOUT_MS - 2250</a></td><td>✅ Merged</td><td>• Enforce a single global 30s timeout via E2…</td><td>• Reliability & UX (docs)</td></tr>
 <tr><td>8 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2238">feat(skills): add PR E2E workflow - 2238</a></td><td>✅ Merged</td><td>• Add PR E2E workflow</td><td>• New capability (AGENTS.md)</td></tr>

@@ -553,6 +553,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability & UX (docs)
 
 
+### test(orgchart): stabilize stateful E2E workflows
+- **PR:** https://github.com/creately/creately-ai/pull/2292
+- **Date:** 26 October 2026
+- **Status:** ✅ Merged
+- **Implementation:**
+  - Stabilize stateful e2e workflows
+- **Impact:**
+  - Reliability & UX (tests)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
