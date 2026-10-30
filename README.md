@@ -40,7 +40,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <!-- AUTO-GENERATED SECTION START -->
 <table>
 <tr><th>📊 Total PRs</th><th>✅ Merged</th><th>🟡 Open</th><th>❌ Closed</th><th>💻 Total Commits</th></tr>
-<tr><td>70</td><td>48</td><td>16</td><td>6</td><td>243</td></tr>
+<tr><td>71</td><td>48</td><td>17</td><td>6</td><td>243</td></tr>
 </table>
 
 ### 📦 creately/creately-ai
@@ -48,6 +48,7 @@ UI/UX Designer working on AI-powered visual collaboration tools at Creately.
 <table>
 <colgroup><col width="12%"><col width="38%"><col width="10%"><col width="22%"><col width="18%"></colgroup>
 <tr><th>Date</th><th>Contribution</th><th>Status</th><th>Implementation</th><th>Impact</th></tr>
+<tr><td>30 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2331">test(orgchart): stabilize succession planning E2E - 2331</a></td><td>🟡 Open</td><td>• Stabilize succession planning e2e</td><td>• Reliability & UX (tests)</td></tr>
 <tr><td>27 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2298">test(process): stabilize stateful E2E workflows - 2298</a></td><td>🟡 Open</td><td>• Stabilize stateful e2e workflows</td><td>• Reliability & UX (tests)</td></tr>
 <tr><td>26 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2292">test(orgchart): stabilize stateful E2E workflows - 2292</a></td><td>✅ Merged</td><td>• Stabilize stateful e2e workflows</td><td>• Reliability & UX (tests)</td></tr>
 <tr><td>19 October 2026</td><td><a href="https://github.com/creately/creately-ai/pull/2267">test(e2e): harden editor specs — persistence flows, timeouts, and selector resilience - 2267</a></td><td>✅ Merged</td><td>• Implemented SVG rendering layer</td><td>• Better genogram shape rendering</td></tr>

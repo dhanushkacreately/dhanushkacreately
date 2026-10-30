@@ -573,6 +573,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability & UX (tests)
 
 
+### test(orgchart): stabilize succession planning E2E
+- **PR:** https://github.com/creately/creately-ai/pull/2331
+- **Date:** 30 October 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Stabilize succession planning e2e
+- **Impact:**
+  - Reliability & UX (tests)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
