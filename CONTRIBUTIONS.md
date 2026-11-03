@@ -583,6 +583,16 @@ This file tracks implementation details and impact of all PRs. Updated automatic
   - Reliability & UX (tests)
 
 
+### test(orgchart): cover succession planning scenarios
+- **PR:** https://github.com/creately/creately-ai/pull/2358
+- **Date:** 3 November 2026
+- **Status:** 🟡 Open
+- **Implementation:**
+  - Cover succession planning scenarios
+- **Impact:**
+  - Reliability & UX (registry)
+
+
 ## creately/creately-next
 ### feat: add excludeFromPlanCount shape flag to exclude shapes from plan limit counting
 - **PR:** https://github.com/creately/creately-next/pull/16422
